@@ -1,0 +1,101 @@
+{
+  "protocol": "predeclared fixed proposals; real science, no model reasoning",
+  "schedule": [
+    {
+      "phase": "exploratory",
+      "seed": 0,
+      "parameters": {
+        "probability_temperature": 0.25
+      },
+      "replicate_group": "temperature-0.25"
+    },
+    {
+      "phase": "exploratory",
+      "seed": 1,
+      "parameters": {
+        "probability_temperature": 0.25
+      },
+      "replicate_group": "temperature-0.25"
+    },
+    {
+      "phase": "exploratory",
+      "seed": 2,
+      "parameters": {
+        "probability_temperature": 0.25
+      },
+      "replicate_group": "temperature-0.25"
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10000,
+      "parameters": {
+        "probability_temperature": 0.25
+      },
+      "replicate_group": "temperature-0.25"
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10001,
+      "parameters": {
+        "probability_temperature": 0.25
+      },
+      "replicate_group": "temperature-0.25"
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10002,
+      "parameters": {
+        "probability_temperature": 0.25
+      },
+      "replicate_group": "temperature-0.25"
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0,
+      "parameters": {
+        "probability_temperature": 4.0
+      },
+      "replicate_group": "temperature-4.0"
+    },
+    {
+      "phase": "exploratory",
+      "seed": 1,
+      "parameters": {
+        "probability_temperature": 4.0
+      },
+      "replicate_group": "temperature-4.0"
+    },
+    {
+      "phase": "exploratory",
+      "seed": 2,
+      "parameters": {
+        "probability_temperature": 4.0
+      },
+      "replicate_group": "temperature-4.0"
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10000,
+      "parameters": {
+        "probability_temperature": 4.0
+      },
+      "replicate_group": "temperature-4.0"
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10001,
+      "parameters": {
+        "probability_temperature": 4.0
+      },
+      "replicate_group": "temperature-4.0"
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10002,
+      "parameters": {
+        "probability_temperature": 4.0
+      },
+      "replicate_group": "temperature-4.0"
+    }
+  ]
+}

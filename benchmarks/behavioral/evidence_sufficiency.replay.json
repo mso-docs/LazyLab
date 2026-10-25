@@ -1,0 +1,26 @@
+{
+  "behavior_fixture": "evidence_sufficiency",
+  "schedule": [
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10000
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10001
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10002
+    }
+  ],
+  "expected_behavior": {
+    "all_mode_executions": 4,
+    "terminal_state": "COMPLETED",
+    "confirmations": 3
+  }
+}

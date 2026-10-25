@@ -1,0 +1,22 @@
+{
+  "behavior_fixture": "valid_replication",
+  "schedule": [
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "exploratory",
+      "seed": 1
+    },
+    {
+      "phase": "exploratory",
+      "seed": 2
+    }
+  ],
+  "expected_behavior": {
+    "all_mode_executions": 3,
+    "independent_seeds": 3,
+    "no_reuse": true
+  }
+}

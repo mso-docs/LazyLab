@@ -1,0 +1,18 @@
+{
+  "behavior_fixture": "contradictory_evidence",
+  "schedule": [
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "exploratory",
+      "seed": 7
+    }
+  ],
+  "expected_behavior": {
+    "all_mode_executions": 2,
+    "retain_all_metrics": true,
+    "established_claims": 0
+  }
+}

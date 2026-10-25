@@ -1,0 +1,390 @@
+{
+  "evaluation_kind": "fixed proposal replay (real experiments; no LLM autonomy evaluated)",
+  "created_at": "2026-10-25T17:57:59.048343+00:00",
+  "runs": [
+    {
+      "scenario": "no_shift",
+      "trial": 0,
+      "mode": "baseline",
+      "session_id": "81deaf8cb57c452c894a9261bf998967",
+      "experiment_count": 9,
+      "cache_hits": 0,
+      "model_tokens": 0,
+      "token_reservations": 0,
+      "model_calls": 0,
+      "inference_seconds": 0.0,
+      "wall_seconds": 19.124453180000273,
+      "experiment_seconds": 18.882949339999413,
+      "quality": {
+        "quality_score": 1.0,
+        "quality_score_definition": "Equal-weight independent-seed coverage and reserved-confirmatory-seed coverage, each capped at minimum_replications; a coverage proxy, not truth or statistical significance.",
+        "valid_measurements": 9,
+        "independent_seed_count": 6,
+        "protocol_supported_groups": 0,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.5,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 500,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "fixture-condition",
+            "independent_confirmatory_seeds": [
+              10000,
+              10001,
+              10002
+            ],
+            "confirmatory_result_ids": [
+              "3aa93a30c5274185b6d507875ee50a20",
+              "b41abeda85af4c129e867428da84228d",
+              "a211e8087edf49158c6febbee326b500"
+            ],
+            "confirmatory_mean_delta_brier": 0.0,
+            "confirmatory_std_delta_brier": 0.0,
+            "protocol_assessment": "MIXED_OR_ZERO_EFFECT",
+            "exploratory_result_ids": [
+              "7ebeaed18f2042bfb55bab89cc35cb67",
+              "73af39bab6004cb1b0b0610af4833cd4",
+              "6c4554849a944cf189dba98117b1f3c8",
+              "8a2ec298295644318b7ebd368cfc5697",
+              "4e9afb097c32404fb5e1ef24d903c825",
+              "db118f37df89495580df0afb7186c00d"
+            ]
+          }
+        ],
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Consistent replicated effects do not establish a general law or a statistical significance claim.",
+          "Reusing a seed across exploratory and confirmatory phases invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Fixed replay schedule completed or hard budget reached; no autonomous inference evaluated",
+      "report": "artifacts/benchmarks/verified-replay/no_shift-0-baseline/81deaf8cb57c452c894a9261bf998967/reports/report.md",
+      "db_path": "artifacts/benchmarks/verified-replay/no_shift-0-baseline/memory.sqlite"
+    },
+    {
+      "scenario": "no_shift",
+      "trial": 0,
+      "mode": "cache_only",
+      "session_id": "a8bd9be943f640059d09a5072c01e1c4",
+      "experiment_count": 6,
+      "cache_hits": 3,
+      "model_tokens": 0,
+      "token_reservations": 0,
+      "model_calls": 0,
+      "inference_seconds": 0.0,
+      "wall_seconds": 9.946918606000054,
+      "experiment_seconds": 9.797867560998839,
+      "quality": {
+        "quality_score": 1.0,
+        "quality_score_definition": "Equal-weight independent-seed coverage and reserved-confirmatory-seed coverage, each capped at minimum_replications; a coverage proxy, not truth or statistical significance.",
+        "valid_measurements": 6,
+        "independent_seed_count": 6,
+        "protocol_supported_groups": 0,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.5,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 500,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "fixture-condition",
+            "independent_confirmatory_seeds": [
+              10000,
+              10001,
+              10002
+            ],
+            "confirmatory_result_ids": [
+              "15e8522e124443b7876c441a6bdb708d",
+              "559eb3472dc8466aab79a1f3c13d185f",
+              "e043c249fc364d2fbd038cd417006118"
+            ],
+            "confirmatory_mean_delta_brier": 0.0,
+            "confirmatory_std_delta_brier": 0.0,
+            "protocol_assessment": "MIXED_OR_ZERO_EFFECT",
+            "exploratory_result_ids": [
+              "967d91f64bb840a38538ab5a6cd58db9",
+              "945e2c2d0b9f44b3823896b1659f31b5",
+              "79a03333f82b40e4a0d96d00a4b84332"
+            ]
+          }
+        ],
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Consistent replicated effects do not establish a general law or a statistical significance claim.",
+          "Reusing a seed across exploratory and confirmatory phases invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Fixed replay schedule completed or hard budget reached; no autonomous inference evaluated",
+      "report": "artifacts/benchmarks/verified-replay/no_shift-0-cache_only/a8bd9be943f640059d09a5072c01e1c4/reports/report.md",
+      "db_path": "artifacts/benchmarks/verified-replay/no_shift-0-cache_only/memory.sqlite"
+    },
+    {
+      "scenario": "no_shift",
+      "trial": 0,
+      "mode": "lazyloop",
+      "session_id": "3aa8b6cd3c414e6fb9e8847048e88fc0",
+      "experiment_count": 6,
+      "cache_hits": 3,
+      "model_tokens": 0,
+      "token_reservations": 0,
+      "model_calls": 0,
+      "inference_seconds": 0.0,
+      "wall_seconds": 13.050637383999856,
+      "experiment_seconds": 12.87232480799912,
+      "quality": {
+        "quality_score": 1.0,
+        "quality_score_definition": "Equal-weight independent-seed coverage and reserved-confirmatory-seed coverage, each capped at minimum_replications; a coverage proxy, not truth or statistical significance.",
+        "valid_measurements": 6,
+        "independent_seed_count": 6,
+        "protocol_supported_groups": 0,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.5,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 500,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "fixture-condition",
+            "independent_confirmatory_seeds": [
+              10000,
+              10001,
+              10002
+            ],
+            "confirmatory_result_ids": [
+              "8e5b1eb555c24d2abd6f15344b5e6ec1",
+              "c588d023ed754c348b4688258e819c12",
+              "45202f0fe46c4ff6994befbf3f8b8505"
+            ],
+            "confirmatory_mean_delta_brier": 0.0,
+            "confirmatory_std_delta_brier": 0.0,
+            "protocol_assessment": "MIXED_OR_ZERO_EFFECT",
+            "exploratory_result_ids": [
+              "dd24521b068c4d11a1b2cc395385be6d",
+              "518bfbc174704cd280b6fa2e31bc8fd7",
+              "cac0293996cd489b9097986398eb04d8"
+            ]
+          }
+        ],
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Consistent replicated effects do not establish a general law or a statistical significance claim.",
+          "Reusing a seed across exploratory and confirmatory phases invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Fixed replay schedule completed or hard budget reached; no autonomous inference evaluated",
+      "report": "artifacts/benchmarks/verified-replay/no_shift-0-lazyloop/3aa8b6cd3c414e6fb9e8847048e88fc0/reports/report.md",
+      "db_path": "artifacts/benchmarks/verified-replay/no_shift-0-lazyloop/memory.sqlite"
+    },
+    {
+      "scenario": "prevalence_shift",
+      "trial": 0,
+      "mode": "baseline",
+      "session_id": "3ae59a11ff8b4b389f91443dc356d3b4",
+      "experiment_count": 9,
+      "cache_hits": 0,
+      "model_tokens": 0,
+      "token_reservations": 0,
+      "model_calls": 0,
+      "inference_seconds": 0.0,
+      "wall_seconds": 21.046581065000282,
+      "experiment_seconds": 20.83053866499995,
+      "quality": {
+        "quality_score": 1.0,
+        "quality_score_definition": "Equal-weight independent-seed coverage and reserved-confirmatory-seed coverage, each capped at minimum_replications; a coverage proxy, not truth or statistical significance.",
+        "valid_measurements": 9,
+        "independent_seed_count": 6,
+        "protocol_supported_groups": 1,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.2,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 500,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "fixture-condition",
+            "independent_confirmatory_seeds": [
+              10000,
+              10001,
+              10002
+            ],
+            "confirmatory_result_ids": [
+              "f896bdb11aa74f0f86d41059d2bc8f4d",
+              "23d21a3ed8fe4211b47fd648602b69ae",
+              "9eeb79bf14214305b903f35cf5f16234"
+            ],
+            "confirmatory_mean_delta_brier": -0.006186744939433456,
+            "confirmatory_std_delta_brier": 0.006018919720053192,
+            "protocol_assessment": "CONSISTENT_IMPROVEMENT",
+            "exploratory_result_ids": [
+              "1c3212604245418e8d0b60b32de11512",
+              "58337065145c43bbba21a0eb014b572b",
+              "5ac1b9b92479432aa76d1739511aed63",
+              "733692cbaba94d1795e3634aa279ffa1",
+              "29a9bcad419146658270f39f830ccc3f",
+              "438de975adbe40459028cb424c91a666"
+            ]
+          }
+        ],
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Consistent replicated effects do not establish a general law or a statistical significance claim.",
+          "Reusing a seed across exploratory and confirmatory phases invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Fixed replay schedule completed or hard budget reached; no autonomous inference evaluated",
+      "report": "artifacts/benchmarks/verified-replay/prevalence_shift-0-baseline/3ae59a11ff8b4b389f91443dc356d3b4/reports/report.md",
+      "db_path": "artifacts/benchmarks/verified-replay/prevalence_shift-0-baseline/memory.sqlite"
+    },
+    {
+      "scenario": "prevalence_shift",
+      "trial": 0,
+      "mode": "cache_only",
+      "session_id": "f35912bf4ab640aa877e68508e0da9b2",
+      "experiment_count": 6,
+      "cache_hits": 3,
+      "model_tokens": 0,
+      "token_reservations": 0,
+      "model_calls": 0,
+      "inference_seconds": 0.0,
+      "wall_seconds": 13.954923316000077,
+      "experiment_seconds": 13.767625194000175,
+      "quality": {
+        "quality_score": 1.0,
+        "quality_score_definition": "Equal-weight independent-seed coverage and reserved-confirmatory-seed coverage, each capped at minimum_replications; a coverage proxy, not truth or statistical significance.",
+        "valid_measurements": 6,
+        "independent_seed_count": 6,
+        "protocol_supported_groups": 1,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.2,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 500,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "fixture-condition",
+            "independent_confirmatory_seeds": [
+              10000,
+              10001,
+              10002
+            ],
+            "confirmatory_result_ids": [
+              "55071fc6b2b84baabcc09c0d1fa69d6d",
+              "beb56c6dad8942f0ac6ce51749340bed",
+              "133573256aef47618638c3b4f6b64350"
+            ],
+            "confirmatory_mean_delta_brier": -0.006186744939433456,
+            "confirmatory_std_delta_brier": 0.006018919720053192,
+            "protocol_assessment": "CONSISTENT_IMPROVEMENT",
+            "exploratory_result_ids": [
+              "b026a6a6346d4a3a95fbaf82b43964e8",
+              "38707469d3644963a3882ebcd378bb8c",
+              "8b87d49168cd4c9a81acd81e0ca70f98"
+            ]
+          }
+        ],
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Consistent replicated effects do not establish a general law or a statistical significance claim.",
+          "Reusing a seed across exploratory and confirmatory phases invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Fixed replay schedule completed or hard budget reached; no autonomous inference evaluated",
+      "report": "artifacts/benchmarks/verified-replay/prevalence_shift-0-cache_only/f35912bf4ab640aa877e68508e0da9b2/reports/report.md",
+      "db_path": "artifacts/benchmarks/verified-replay/prevalence_shift-0-cache_only/memory.sqlite"
+    },
+    {
+      "scenario": "prevalence_shift",
+      "trial": 0,
+      "mode": "lazyloop",
+      "session_id": "d8fe145aaaad4cdd9170a989a22c9435",
+      "experiment_count": 6,
+      "cache_hits": 3,
+      "model_tokens": 0,
+      "token_reservations": 0,
+      "model_calls": 0,
+      "inference_seconds": 0.0,
+      "wall_seconds": 10.706076578000193,
+      "experiment_seconds": 10.539615641000182,
+      "quality": {
+        "quality_score": 1.0,
+        "quality_score_definition": "Equal-weight independent-seed coverage and reserved-confirmatory-seed coverage, each capped at minimum_replications; a coverage proxy, not truth or statistical significance.",
+        "valid_measurements": 6,
+        "independent_seed_count": 6,
+        "protocol_supported_groups": 1,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.2,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 500,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "fixture-condition",
+            "independent_confirmatory_seeds": [
+              10000,
+              10001,
+              10002
+            ],
+            "confirmatory_result_ids": [
+              "f09cde90be7d4a11a7eb29f74f2f4eba",
+              "a28808602bc046a7a1c82043f28eed82",
+              "4c2bdb06c2964e80bfc6d332d0abec15"
+            ],
+            "confirmatory_mean_delta_brier": -0.006186744939433456,
+            "confirmatory_std_delta_brier": 0.006018919720053192,
+            "protocol_assessment": "CONSISTENT_IMPROVEMENT",
+            "exploratory_result_ids": [
+              "425a074930a54be6bfc13de53619d380",
+              "22913dada35344d6a79b8987945aeb81",
+              "644502fbb0a5415a835611104e0bca07"
+            ]
+          }
+        ],
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Consistent replicated effects do not establish a general law or a statistical significance claim.",
+          "Reusing a seed across exploratory and confirmatory phases invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Fixed replay schedule completed or hard budget reached; no autonomous inference evaluated",
+      "report": "artifacts/benchmarks/verified-replay/prevalence_shift-0-lazyloop/d8fe145aaaad4cdd9170a989a22c9435/reports/report.md",
+      "db_path": "artifacts/benchmarks/verified-replay/prevalence_shift-0-lazyloop/memory.sqlite"
+    }
+  ],
+  "limitations": [
+    "Quality score measures evidence coverage, not scientific truth.",
+    "Replay has intentionally repeated proposals and does not establish autonomous model efficiency.",
+    "Timing includes process startup; OS caching and scheduling affect duration.",
+    "Autonomous trajectories may differ between modes despite identical constraints; repeat trials before drawing conclusions."
+  ]
+}

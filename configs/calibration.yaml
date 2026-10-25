@@ -1,0 +1,23 @@
+# Set OLLAMA_MODEL to any locally installed model that supports JSON outputs.
+objective:
+  title: Oracle prior correction under controlled label shift
+  question: When does correcting for known evaluation prevalence improve Brier score, and is the effect consistent across independent seeds?
+  permitted_parameters:
+    train_prevalence: [0.5]
+    evaluation_prevalence: [0.1, 0.2, 0.5, 0.8]
+    sample_size: [500, 1000, 2000]
+    feature_count: [6]
+    class_separation: [0.5, 1.0]
+    noise: [0.0]
+    logistic_c: [1.0]
+    probability_temperature: [1.0, 2.0]
+budget:
+  max_experiments: 12
+  max_rounds: 20
+  max_candidates: 5
+  wall_seconds: 1200
+  max_tokens: 20000
+  call_token_reserve: 2000
+  repair_attempts: 2
+  no_progress_rounds: 3
+  minimum_replications: 3

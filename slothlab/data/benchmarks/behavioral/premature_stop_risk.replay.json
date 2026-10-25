@@ -1,0 +1,44 @@
+{
+  "behavior_fixture": "premature_stop_risk",
+  "schedule": [
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10000
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10001
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10002
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10003
+    }
+  ],
+  "expected_behavior": {
+    "baseline_executions": 8,
+    "optimized_executions": 5,
+    "terminal_state": "COMPLETED",
+    "confirmations": 4,
+    "premature_stops": 0
+  }
+}

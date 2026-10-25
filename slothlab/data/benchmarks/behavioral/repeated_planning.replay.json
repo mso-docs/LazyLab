@@ -1,0 +1,35 @@
+{
+  "behavior_fixture": "repeated_planning",
+  "schedule": [
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0
+    }
+  ],
+  "expected_behavior": {
+    "baseline_executions": 6,
+    "optimized_executions": 1,
+    "lazyloop_max_reuses": 3,
+    "evidence_insufficient": true
+  }
+}

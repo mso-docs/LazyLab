@@ -1,0 +1,20 @@
+{
+  "behavior_fixture": "resource_constraints",
+  "schedule": [
+    {
+      "phase": "exploratory",
+      "seed": 0,
+      "estimated_compute_seconds": 600
+    },
+    {
+      "phase": "exploratory",
+      "seed": 1,
+      "estimated_compute_seconds": 0.1
+    }
+  ],
+  "expected_behavior": {
+    "all_mode_executions": 1,
+    "minimum_deferrals": 1,
+    "expensive_seed_must_not_execute": 0
+  }
+}

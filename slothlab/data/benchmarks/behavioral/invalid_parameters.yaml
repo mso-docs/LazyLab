@@ -1,0 +1,27 @@
+objective:
+  title: Reject invalid and unauthorized proposals
+  question: Reject schema-invalid and domain-unauthorized settings before executing
+    the subsequent valid scientific action.
+  permitted_parameters:
+    sample_size:
+    - 1000
+    train_prevalence:
+    - 0.5
+    evaluation_prevalence:
+    - 0.2
+    feature_count:
+    - 6
+    class_separation:
+    - 1.0
+    noise:
+    - 0.0
+    logistic_c:
+    - 1.0
+    probability_temperature:
+    - 1.0
+budget:
+  max_experiments: 8
+  max_rounds: 20
+  wall_seconds: 120
+  max_tokens: 20000
+  no_progress_rounds: 3

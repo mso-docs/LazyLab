@@ -1,0 +1,85 @@
+{
+  "kind": "independent reference grid",
+  "created_at": "2026-10-25T18:58:46.336086+00:00",
+  "session_id": "caec2c905f904b56a22f647294c068b0",
+  "db_path": "artifacts/verification-v2/reference-grid/reference.sqlite",
+  "report": "artifacts/verification-v2/reference-grid/caec2c905f904b56a22f647294c068b0/reports/report.md",
+  "planner_access": false,
+  "reference_seeds": [
+    2147483647,
+    2147483646,
+    2147483645
+  ],
+  "conditions": [
+    {
+      "condition_key": "{\"class_separation\":1.0,\"evaluation_prevalence\":0.2,\"feature_count\":6,\"logistic_c\":1.0,\"noise\":0.0,\"probability_temperature\":1.0,\"sample_size\":500,\"train_prevalence\":0.5}",
+      "parameters": {
+        "train_prevalence": 0.5,
+        "evaluation_prevalence": 0.2,
+        "sample_size": 500,
+        "feature_count": 6,
+        "class_separation": 1.0,
+        "noise": 0.0,
+        "logistic_c": 1.0,
+        "probability_temperature": 1.0
+      },
+      "seeds": [
+        2147483647,
+        2147483646,
+        2147483645
+      ],
+      "result_ids": [
+        "a087a4abf18e4dc0b023f15ea88ffad4",
+        "4223ae9786c54e1189c30a2778eb1f17",
+        "ecf73ad808694831b9142eb79f2b8f91"
+      ],
+      "completed": 3,
+      "mean_delta_brier": -0.013694121015755909,
+      "std_delta_brier": 0.01961693047973265,
+      "delta_brier_ci95": [
+        -0.06242527780924428,
+        0.03503703577773246
+      ],
+      "scientific_source_versions": [
+        "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+      ]
+    },
+    {
+      "condition_key": "{\"class_separation\":1.0,\"evaluation_prevalence\":0.5,\"feature_count\":6,\"logistic_c\":1.0,\"noise\":0.0,\"probability_temperature\":1.0,\"sample_size\":500,\"train_prevalence\":0.5}",
+      "parameters": {
+        "train_prevalence": 0.5,
+        "evaluation_prevalence": 0.5,
+        "sample_size": 500,
+        "feature_count": 6,
+        "class_separation": 1.0,
+        "noise": 0.0,
+        "logistic_c": 1.0,
+        "probability_temperature": 1.0
+      },
+      "seeds": [
+        2147483647,
+        2147483646,
+        2147483645
+      ],
+      "result_ids": [
+        "086cbd2fac1a43229bf1bff21aef8ddb",
+        "400b64285091435385ebf46507c3a79f",
+        "290c90fa120147768d7b2ee929b9056f"
+      ],
+      "completed": 3,
+      "mean_delta_brier": 0.0,
+      "std_delta_brier": 0.0,
+      "delta_brier_ci95": [
+        0.0,
+        0.0
+      ],
+      "scientific_source_versions": [
+        "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+      ]
+    }
+  ],
+  "limitations": [
+    "Reference means are independent finite-sample estimates, not exact population truth.",
+    "Reference outcomes must be inspected only after an autonomous investigation terminates."
+  ]
+}

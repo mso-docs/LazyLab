@@ -1,0 +1,1245 @@
+{
+  "evaluation_kind": "autonomous Ollama comparison",
+  "created_at": "2026-10-25T19:56:38.465413+00:00",
+  "complete": true,
+  "runs": [
+    {
+      "scenario": "paired_scoped_shift",
+      "trial": 0,
+      "mode": "baseline",
+      "arm_order": [
+        "baseline",
+        "cache_only",
+        "lazyloop"
+      ],
+      "state": "STOPPED",
+      "session_id": "82c9881b51f94661999fd0dc35fe9a75",
+      "constraints_signature": "469857fb7a6c1c4def5e74886b29f297e8f1b87c476448f66c151b091fb173b9",
+      "seed_partitions": {
+        "exploratory_seeds": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "confirmatory_seeds": [
+          10000,
+          10001,
+          10002
+        ]
+      },
+      "experiment_count": 2,
+      "cache_hits": 0,
+      "model_tokens": 4162,
+      "token_reservations": 4162,
+      "model_calls": 3,
+      "inference_seconds": 60.74575289800032,
+      "wall_seconds": 63.07419686199955,
+      "experiment_seconds": 2.1715617419995397,
+      "redundant_proposals": 0,
+      "scientific_cpu_seconds": 1.683643,
+      "peak_memory_bytes": 221224960,
+      "scientific_source_versions": [
+        "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+      ],
+      "quality": {
+        "quality_score": 0.3333333333333333,
+        "quality_score_definition": "Equal-weight independent-seed and reserved-confirmatory-seed coverage, capped at minimum_replications. Coverage is not scientific truth.",
+        "scientific_quality_score": 0.625,
+        "scientific_quality_score_definition": "Predeclared weighted diagnostic: measurement integrity .30, independent confirmation .30, applicable no-shift identity controls .20, claim/evidence calibration .20; inapplicable components are excluded and remaining weights renormalized. No valid measurements scores zero.",
+        "rubric": {
+          "measurement_integrity": {
+            "weight": 0.3,
+            "score": 1.0
+          },
+          "independent_confirmation": {
+            "weight": 0.3,
+            "score": 0.0
+          },
+          "controlled_expected_behavior": {
+            "weight": 0.2,
+            "score": null
+          },
+          "claim_evidence_calibration": {
+            "weight": 0.2,
+            "score": 1.0
+          }
+        },
+        "valid_measurements": 2,
+        "invalid_result_ids": [],
+        "scientific_source_versions": [
+          "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+        ],
+        "independent_seed_count": 2,
+        "protocol_supported_groups": 0,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.2,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 100,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "condition-71a96740d9aebd3e",
+            "independent_confirmatory_seeds": [],
+            "confirmatory_result_ids": [],
+            "confirmatory_mean_delta_brier": null,
+            "confirmatory_std_delta_brier": null,
+            "confirmatory_delta_brier_ci95": null,
+            "protocol_assessment": "INSUFFICIENT_EVIDENCE",
+            "exploratory_result_ids": [
+              "836d6ad21f814eaebf993154df9d5c61",
+              "0901573b01414a71a3cc27e82a4062ac"
+            ],
+            "all_result_ids": [
+              "836d6ad21f814eaebf993154df9d5c61",
+              "0901573b01414a71a3cc27e82a4062ac"
+            ]
+          }
+        ],
+        "control_checks": [],
+        "claim_checks": [
+          {
+            "hypothesis_id": "cd6063b9cdd04a21987af187e8efb117",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          },
+          {
+            "hypothesis_id": "79b98ad70de24a7fa742ff6944a869e0",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          }
+        ],
+        "unjustified_established_claims": 0,
+        "model_interpretations_with_invalid_references": 2,
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Scores are a transparent finite benchmark rubric, not a general measure of scientific truth.",
+          "Student-t intervals assume independent seeds sampled from the generator distribution; no multiplicity correction is applied.",
+          "Consistent replicated effects alone do not establish a general law or statistical significance.",
+          "Reusing an exploratory seed invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Maximum planning rounds reached: evidence insufficient",
+      "error": null,
+      "report": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-0-baseline/82c9881b51f94661999fd0dc35fe9a75/reports/report.md",
+      "db_path": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-0-baseline/memory.sqlite"
+    },
+    {
+      "scenario": "paired_scoped_shift",
+      "trial": 0,
+      "mode": "cache_only",
+      "arm_order": [
+        "baseline",
+        "cache_only",
+        "lazyloop"
+      ],
+      "state": "STOPPED",
+      "session_id": "cec15f30ec8b4537b9dbd887e0e95188",
+      "constraints_signature": "469857fb7a6c1c4def5e74886b29f297e8f1b87c476448f66c151b091fb173b9",
+      "seed_partitions": {
+        "exploratory_seeds": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "confirmatory_seeds": [
+          10000,
+          10001,
+          10002
+        ]
+      },
+      "experiment_count": 2,
+      "cache_hits": 0,
+      "model_tokens": 4204,
+      "token_reservations": 4204,
+      "model_calls": 3,
+      "inference_seconds": 96.24295737800003,
+      "wall_seconds": 100.17218161300025,
+      "experiment_seconds": 3.743347492999419,
+      "redundant_proposals": 0,
+      "scientific_cpu_seconds": 3.1095990000000002,
+      "peak_memory_bytes": 219348992,
+      "scientific_source_versions": [
+        "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+      ],
+      "quality": {
+        "quality_score": 0.3333333333333333,
+        "quality_score_definition": "Equal-weight independent-seed and reserved-confirmatory-seed coverage, capped at minimum_replications. Coverage is not scientific truth.",
+        "scientific_quality_score": 0.625,
+        "scientific_quality_score_definition": "Predeclared weighted diagnostic: measurement integrity .30, independent confirmation .30, applicable no-shift identity controls .20, claim/evidence calibration .20; inapplicable components are excluded and remaining weights renormalized. No valid measurements scores zero.",
+        "rubric": {
+          "measurement_integrity": {
+            "weight": 0.3,
+            "score": 1.0
+          },
+          "independent_confirmation": {
+            "weight": 0.3,
+            "score": 0.0
+          },
+          "controlled_expected_behavior": {
+            "weight": 0.2,
+            "score": null
+          },
+          "claim_evidence_calibration": {
+            "weight": 0.2,
+            "score": 1.0
+          }
+        },
+        "valid_measurements": 2,
+        "invalid_result_ids": [],
+        "scientific_source_versions": [
+          "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+        ],
+        "independent_seed_count": 2,
+        "protocol_supported_groups": 0,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.2,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 100,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "condition-71a96740d9aebd3e",
+            "independent_confirmatory_seeds": [],
+            "confirmatory_result_ids": [],
+            "confirmatory_mean_delta_brier": null,
+            "confirmatory_std_delta_brier": null,
+            "confirmatory_delta_brier_ci95": null,
+            "protocol_assessment": "INSUFFICIENT_EVIDENCE",
+            "exploratory_result_ids": [
+              "763fc68f45e04e669122f07e85d2f424",
+              "ff47f6a29b1749c998220e230121e3cc"
+            ],
+            "all_result_ids": [
+              "763fc68f45e04e669122f07e85d2f424",
+              "ff47f6a29b1749c998220e230121e3cc"
+            ]
+          }
+        ],
+        "control_checks": [],
+        "claim_checks": [
+          {
+            "hypothesis_id": "98c38ae23db9497e86b81df5a9388007",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          },
+          {
+            "hypothesis_id": "8f65c6b736714c79b179bf3c23801242",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          }
+        ],
+        "unjustified_established_claims": 0,
+        "model_interpretations_with_invalid_references": 2,
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Scores are a transparent finite benchmark rubric, not a general measure of scientific truth.",
+          "Student-t intervals assume independent seeds sampled from the generator distribution; no multiplicity correction is applied.",
+          "Consistent replicated effects alone do not establish a general law or statistical significance.",
+          "Reusing an exploratory seed invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Maximum planning rounds reached: evidence insufficient",
+      "error": null,
+      "report": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-0-cache_only/cec15f30ec8b4537b9dbd887e0e95188/reports/report.md",
+      "db_path": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-0-cache_only/memory.sqlite"
+    },
+    {
+      "scenario": "paired_scoped_shift",
+      "trial": 0,
+      "mode": "lazyloop",
+      "arm_order": [
+        "baseline",
+        "cache_only",
+        "lazyloop"
+      ],
+      "state": "STOPPED",
+      "session_id": "f75f21e074f748a38e1b5f10005ee8c1",
+      "constraints_signature": "469857fb7a6c1c4def5e74886b29f297e8f1b87c476448f66c151b091fb173b9",
+      "seed_partitions": {
+        "exploratory_seeds": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "confirmatory_seeds": [
+          10000,
+          10001,
+          10002
+        ]
+      },
+      "experiment_count": 2,
+      "cache_hits": 0,
+      "model_tokens": 4092,
+      "token_reservations": 4092,
+      "model_calls": 3,
+      "inference_seconds": 85.81417750400033,
+      "wall_seconds": 89.52618564499971,
+      "experiment_seconds": 3.559877088000576,
+      "redundant_proposals": 0,
+      "scientific_cpu_seconds": 2.97145,
+      "peak_memory_bytes": 219455488,
+      "scientific_source_versions": [
+        "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+      ],
+      "quality": {
+        "quality_score": 0.3333333333333333,
+        "quality_score_definition": "Equal-weight independent-seed and reserved-confirmatory-seed coverage, capped at minimum_replications. Coverage is not scientific truth.",
+        "scientific_quality_score": 0.625,
+        "scientific_quality_score_definition": "Predeclared weighted diagnostic: measurement integrity .30, independent confirmation .30, applicable no-shift identity controls .20, claim/evidence calibration .20; inapplicable components are excluded and remaining weights renormalized. No valid measurements scores zero.",
+        "rubric": {
+          "measurement_integrity": {
+            "weight": 0.3,
+            "score": 1.0
+          },
+          "independent_confirmation": {
+            "weight": 0.3,
+            "score": 0.0
+          },
+          "controlled_expected_behavior": {
+            "weight": 0.2,
+            "score": null
+          },
+          "claim_evidence_calibration": {
+            "weight": 0.2,
+            "score": 1.0
+          }
+        },
+        "valid_measurements": 2,
+        "invalid_result_ids": [],
+        "scientific_source_versions": [
+          "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+        ],
+        "independent_seed_count": 2,
+        "protocol_supported_groups": 0,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.2,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 100,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "condition-71a96740d9aebd3e",
+            "independent_confirmatory_seeds": [],
+            "confirmatory_result_ids": [],
+            "confirmatory_mean_delta_brier": null,
+            "confirmatory_std_delta_brier": null,
+            "confirmatory_delta_brier_ci95": null,
+            "protocol_assessment": "INSUFFICIENT_EVIDENCE",
+            "exploratory_result_ids": [
+              "1d99ee92c80947a58be8e6c033cedace",
+              "d0828b240a4d46a99e605da0125ae7b2"
+            ],
+            "all_result_ids": [
+              "1d99ee92c80947a58be8e6c033cedace",
+              "d0828b240a4d46a99e605da0125ae7b2"
+            ]
+          }
+        ],
+        "control_checks": [],
+        "claim_checks": [
+          {
+            "hypothesis_id": "5a87cce9325847e0ab160f41d2fb113b",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          },
+          {
+            "hypothesis_id": "e8ff228c836545fe9073c8703f16bf04",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          }
+        ],
+        "unjustified_established_claims": 0,
+        "model_interpretations_with_invalid_references": 0,
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Scores are a transparent finite benchmark rubric, not a general measure of scientific truth.",
+          "Student-t intervals assume independent seeds sampled from the generator distribution; no multiplicity correction is applied.",
+          "Consistent replicated effects alone do not establish a general law or statistical significance.",
+          "Reusing an exploratory seed invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Maximum planning rounds reached: evidence insufficient",
+      "error": null,
+      "report": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-0-lazyloop/f75f21e074f748a38e1b5f10005ee8c1/reports/report.md",
+      "db_path": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-0-lazyloop/memory.sqlite"
+    },
+    {
+      "scenario": "paired_scoped_shift",
+      "trial": 1,
+      "mode": "cache_only",
+      "arm_order": [
+        "cache_only",
+        "lazyloop",
+        "baseline"
+      ],
+      "state": "STOPPED",
+      "session_id": "2675b23fba114d809cadff627b95ddd5",
+      "constraints_signature": "2c63199fc929b68d9414c729a8af118264d325a54da65cb2055e20b14ce847ba",
+      "seed_partitions": {
+        "exploratory_seeds": [
+          10003,
+          10004,
+          10005,
+          10006
+        ],
+        "confirmatory_seeds": [
+          10007,
+          10008,
+          10009
+        ]
+      },
+      "experiment_count": 2,
+      "cache_hits": 0,
+      "model_tokens": 4157,
+      "token_reservations": 4157,
+      "model_calls": 3,
+      "inference_seconds": 190.00558431599984,
+      "wall_seconds": 198.49153392599965,
+      "experiment_seconds": 7.9811672550004005,
+      "redundant_proposals": 0,
+      "scientific_cpu_seconds": 6.476782,
+      "peak_memory_bytes": 219136000,
+      "scientific_source_versions": [
+        "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+      ],
+      "quality": {
+        "quality_score": 0.3333333333333333,
+        "quality_score_definition": "Equal-weight independent-seed and reserved-confirmatory-seed coverage, capped at minimum_replications. Coverage is not scientific truth.",
+        "scientific_quality_score": 0.625,
+        "scientific_quality_score_definition": "Predeclared weighted diagnostic: measurement integrity .30, independent confirmation .30, applicable no-shift identity controls .20, claim/evidence calibration .20; inapplicable components are excluded and remaining weights renormalized. No valid measurements scores zero.",
+        "rubric": {
+          "measurement_integrity": {
+            "weight": 0.3,
+            "score": 1.0
+          },
+          "independent_confirmation": {
+            "weight": 0.3,
+            "score": 0.0
+          },
+          "controlled_expected_behavior": {
+            "weight": 0.2,
+            "score": null
+          },
+          "claim_evidence_calibration": {
+            "weight": 0.2,
+            "score": 1.0
+          }
+        },
+        "valid_measurements": 2,
+        "invalid_result_ids": [],
+        "scientific_source_versions": [
+          "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+        ],
+        "independent_seed_count": 2,
+        "protocol_supported_groups": 0,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.2,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 100,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "condition-71a96740d9aebd3e",
+            "independent_confirmatory_seeds": [],
+            "confirmatory_result_ids": [],
+            "confirmatory_mean_delta_brier": null,
+            "confirmatory_std_delta_brier": null,
+            "confirmatory_delta_brier_ci95": null,
+            "protocol_assessment": "INSUFFICIENT_EVIDENCE",
+            "exploratory_result_ids": [
+              "3c7af55d16594f658d65fc982f5022f3",
+              "19a85fe719ba4f7491e3e73e06e5a159"
+            ],
+            "all_result_ids": [
+              "3c7af55d16594f658d65fc982f5022f3",
+              "19a85fe719ba4f7491e3e73e06e5a159"
+            ]
+          }
+        ],
+        "control_checks": [],
+        "claim_checks": [
+          {
+            "hypothesis_id": "e724276b3bfb458a9988e2ad400ee788",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          },
+          {
+            "hypothesis_id": "643fc98ff5ff46ee85030041b98e345a",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          }
+        ],
+        "unjustified_established_claims": 0,
+        "model_interpretations_with_invalid_references": 2,
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Scores are a transparent finite benchmark rubric, not a general measure of scientific truth.",
+          "Student-t intervals assume independent seeds sampled from the generator distribution; no multiplicity correction is applied.",
+          "Consistent replicated effects alone do not establish a general law or statistical significance.",
+          "Reusing an exploratory seed invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Maximum planning rounds reached: evidence insufficient",
+      "error": null,
+      "report": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-1-cache_only/2675b23fba114d809cadff627b95ddd5/reports/report.md",
+      "db_path": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-1-cache_only/memory.sqlite"
+    },
+    {
+      "scenario": "paired_scoped_shift",
+      "trial": 1,
+      "mode": "lazyloop",
+      "arm_order": [
+        "cache_only",
+        "lazyloop",
+        "baseline"
+      ],
+      "state": "STOPPED",
+      "session_id": "fca75c8d1ea548c6bc0a9ce1543fd57b",
+      "constraints_signature": "2c63199fc929b68d9414c729a8af118264d325a54da65cb2055e20b14ce847ba",
+      "seed_partitions": {
+        "exploratory_seeds": [
+          10003,
+          10004,
+          10005,
+          10006
+        ],
+        "confirmatory_seeds": [
+          10007,
+          10008,
+          10009
+        ]
+      },
+      "experiment_count": 2,
+      "cache_hits": 0,
+      "model_tokens": 4074,
+      "token_reservations": 4074,
+      "model_calls": 3,
+      "inference_seconds": 247.5136536760001,
+      "wall_seconds": 254.90736647199992,
+      "experiment_seconds": 7.182389794999835,
+      "redundant_proposals": 0,
+      "scientific_cpu_seconds": 5.733062,
+      "peak_memory_bytes": 219320320,
+      "scientific_source_versions": [
+        "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+      ],
+      "quality": {
+        "quality_score": 0.3333333333333333,
+        "quality_score_definition": "Equal-weight independent-seed and reserved-confirmatory-seed coverage, capped at minimum_replications. Coverage is not scientific truth.",
+        "scientific_quality_score": 0.625,
+        "scientific_quality_score_definition": "Predeclared weighted diagnostic: measurement integrity .30, independent confirmation .30, applicable no-shift identity controls .20, claim/evidence calibration .20; inapplicable components are excluded and remaining weights renormalized. No valid measurements scores zero.",
+        "rubric": {
+          "measurement_integrity": {
+            "weight": 0.3,
+            "score": 1.0
+          },
+          "independent_confirmation": {
+            "weight": 0.3,
+            "score": 0.0
+          },
+          "controlled_expected_behavior": {
+            "weight": 0.2,
+            "score": null
+          },
+          "claim_evidence_calibration": {
+            "weight": 0.2,
+            "score": 1.0
+          }
+        },
+        "valid_measurements": 2,
+        "invalid_result_ids": [],
+        "scientific_source_versions": [
+          "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+        ],
+        "independent_seed_count": 2,
+        "protocol_supported_groups": 0,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.2,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 100,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "condition-71a96740d9aebd3e",
+            "independent_confirmatory_seeds": [],
+            "confirmatory_result_ids": [],
+            "confirmatory_mean_delta_brier": null,
+            "confirmatory_std_delta_brier": null,
+            "confirmatory_delta_brier_ci95": null,
+            "protocol_assessment": "INSUFFICIENT_EVIDENCE",
+            "exploratory_result_ids": [
+              "08fcacd7b85748a39da306b83ce1565a",
+              "ddfaa027946245a89de97f14c8aeaa37"
+            ],
+            "all_result_ids": [
+              "08fcacd7b85748a39da306b83ce1565a",
+              "ddfaa027946245a89de97f14c8aeaa37"
+            ]
+          }
+        ],
+        "control_checks": [],
+        "claim_checks": [
+          {
+            "hypothesis_id": "d3402074702c4804806d325d37508138",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          },
+          {
+            "hypothesis_id": "aec2142a664c405fa4ecacad557b1337",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          }
+        ],
+        "unjustified_established_claims": 0,
+        "model_interpretations_with_invalid_references": 0,
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Scores are a transparent finite benchmark rubric, not a general measure of scientific truth.",
+          "Student-t intervals assume independent seeds sampled from the generator distribution; no multiplicity correction is applied.",
+          "Consistent replicated effects alone do not establish a general law or statistical significance.",
+          "Reusing an exploratory seed invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Maximum planning rounds reached: evidence insufficient",
+      "error": null,
+      "report": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-1-lazyloop/fca75c8d1ea548c6bc0a9ce1543fd57b/reports/report.md",
+      "db_path": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-1-lazyloop/memory.sqlite"
+    },
+    {
+      "scenario": "paired_scoped_shift",
+      "trial": 1,
+      "mode": "baseline",
+      "arm_order": [
+        "cache_only",
+        "lazyloop",
+        "baseline"
+      ],
+      "state": "STOPPED",
+      "session_id": "a32e443216944e8296b67ac04520fb68",
+      "constraints_signature": "2c63199fc929b68d9414c729a8af118264d325a54da65cb2055e20b14ce847ba",
+      "seed_partitions": {
+        "exploratory_seeds": [
+          10003,
+          10004,
+          10005,
+          10006
+        ],
+        "confirmatory_seeds": [
+          10007,
+          10008,
+          10009
+        ]
+      },
+      "experiment_count": 2,
+      "cache_hits": 0,
+      "model_tokens": 4280,
+      "token_reservations": 4280,
+      "model_calls": 3,
+      "inference_seconds": 81.3343635859992,
+      "wall_seconds": 84.39723101599975,
+      "experiment_seconds": 2.9094861700004913,
+      "redundant_proposals": 0,
+      "scientific_cpu_seconds": 2.418108,
+      "peak_memory_bytes": 219185152,
+      "scientific_source_versions": [
+        "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+      ],
+      "quality": {
+        "quality_score": 0.3333333333333333,
+        "quality_score_definition": "Equal-weight independent-seed and reserved-confirmatory-seed coverage, capped at minimum_replications. Coverage is not scientific truth.",
+        "scientific_quality_score": 0.625,
+        "scientific_quality_score_definition": "Predeclared weighted diagnostic: measurement integrity .30, independent confirmation .30, applicable no-shift identity controls .20, claim/evidence calibration .20; inapplicable components are excluded and remaining weights renormalized. No valid measurements scores zero.",
+        "rubric": {
+          "measurement_integrity": {
+            "weight": 0.3,
+            "score": 1.0
+          },
+          "independent_confirmation": {
+            "weight": 0.3,
+            "score": 0.0
+          },
+          "controlled_expected_behavior": {
+            "weight": 0.2,
+            "score": null
+          },
+          "claim_evidence_calibration": {
+            "weight": 0.2,
+            "score": 1.0
+          }
+        },
+        "valid_measurements": 2,
+        "invalid_result_ids": [],
+        "scientific_source_versions": [
+          "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+        ],
+        "independent_seed_count": 2,
+        "protocol_supported_groups": 0,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.2,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 100,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "condition-71a96740d9aebd3e",
+            "independent_confirmatory_seeds": [],
+            "confirmatory_result_ids": [],
+            "confirmatory_mean_delta_brier": null,
+            "confirmatory_std_delta_brier": null,
+            "confirmatory_delta_brier_ci95": null,
+            "protocol_assessment": "INSUFFICIENT_EVIDENCE",
+            "exploratory_result_ids": [
+              "e63fe8b33b8e42fbb53434d539f932bd",
+              "092dc0e0c46844c889def010c56caea1"
+            ],
+            "all_result_ids": [
+              "e63fe8b33b8e42fbb53434d539f932bd",
+              "092dc0e0c46844c889def010c56caea1"
+            ]
+          }
+        ],
+        "control_checks": [],
+        "claim_checks": [
+          {
+            "hypothesis_id": "232ed8fa04e14cb8ae85f1834dcf40ab",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          },
+          {
+            "hypothesis_id": "77d36fa934a54220b94a9a60a36d2206",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          }
+        ],
+        "unjustified_established_claims": 0,
+        "model_interpretations_with_invalid_references": 2,
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Scores are a transparent finite benchmark rubric, not a general measure of scientific truth.",
+          "Student-t intervals assume independent seeds sampled from the generator distribution; no multiplicity correction is applied.",
+          "Consistent replicated effects alone do not establish a general law or statistical significance.",
+          "Reusing an exploratory seed invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Maximum planning rounds reached: evidence insufficient",
+      "error": null,
+      "report": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-1-baseline/a32e443216944e8296b67ac04520fb68/reports/report.md",
+      "db_path": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-1-baseline/memory.sqlite"
+    },
+    {
+      "scenario": "paired_scoped_shift",
+      "trial": 2,
+      "mode": "lazyloop",
+      "arm_order": [
+        "lazyloop",
+        "baseline",
+        "cache_only"
+      ],
+      "state": "STOPPED",
+      "session_id": "7c4e1869cf5640aebaa11f045559b82e",
+      "constraints_signature": "6721b842d2f8b6eb90317ed611582d6ea016bd9afd3aa7136b502c350a714c5f",
+      "seed_partitions": {
+        "exploratory_seeds": [
+          10010,
+          10011,
+          10012,
+          10013
+        ],
+        "confirmatory_seeds": [
+          10014,
+          10015,
+          10016
+        ]
+      },
+      "experiment_count": 2,
+      "cache_hits": 0,
+      "model_tokens": 4378,
+      "token_reservations": 4378,
+      "model_calls": 3,
+      "inference_seconds": 112.9964215760001,
+      "wall_seconds": 117.52171766900028,
+      "experiment_seconds": 4.300119196000196,
+      "redundant_proposals": 0,
+      "scientific_cpu_seconds": 3.5989269999999998,
+      "peak_memory_bytes": 219185152,
+      "scientific_source_versions": [
+        "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+      ],
+      "quality": {
+        "quality_score": 0.3333333333333333,
+        "quality_score_definition": "Equal-weight independent-seed and reserved-confirmatory-seed coverage, capped at minimum_replications. Coverage is not scientific truth.",
+        "scientific_quality_score": 0.625,
+        "scientific_quality_score_definition": "Predeclared weighted diagnostic: measurement integrity .30, independent confirmation .30, applicable no-shift identity controls .20, claim/evidence calibration .20; inapplicable components are excluded and remaining weights renormalized. No valid measurements scores zero.",
+        "rubric": {
+          "measurement_integrity": {
+            "weight": 0.3,
+            "score": 1.0
+          },
+          "independent_confirmation": {
+            "weight": 0.3,
+            "score": 0.0
+          },
+          "controlled_expected_behavior": {
+            "weight": 0.2,
+            "score": null
+          },
+          "claim_evidence_calibration": {
+            "weight": 0.2,
+            "score": 1.0
+          }
+        },
+        "valid_measurements": 2,
+        "invalid_result_ids": [],
+        "scientific_source_versions": [
+          "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+        ],
+        "independent_seed_count": 2,
+        "protocol_supported_groups": 0,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.2,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 100,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "condition-71a96740d9aebd3e",
+            "independent_confirmatory_seeds": [],
+            "confirmatory_result_ids": [],
+            "confirmatory_mean_delta_brier": null,
+            "confirmatory_std_delta_brier": null,
+            "confirmatory_delta_brier_ci95": null,
+            "protocol_assessment": "INSUFFICIENT_EVIDENCE",
+            "exploratory_result_ids": [
+              "be4186a35869433d89d4baa4d7dd15fd",
+              "ad1598bc0a414de3b2ed03e51fbf12f8"
+            ],
+            "all_result_ids": [
+              "be4186a35869433d89d4baa4d7dd15fd",
+              "ad1598bc0a414de3b2ed03e51fbf12f8"
+            ]
+          }
+        ],
+        "control_checks": [],
+        "claim_checks": [
+          {
+            "hypothesis_id": "ab3360476edb4e199966dfd3511cf230",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          },
+          {
+            "hypothesis_id": "46c43dd49cf249dea84adb8703598ce9",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          }
+        ],
+        "unjustified_established_claims": 0,
+        "model_interpretations_with_invalid_references": 2,
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Scores are a transparent finite benchmark rubric, not a general measure of scientific truth.",
+          "Student-t intervals assume independent seeds sampled from the generator distribution; no multiplicity correction is applied.",
+          "Consistent replicated effects alone do not establish a general law or statistical significance.",
+          "Reusing an exploratory seed invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Maximum planning rounds reached: evidence insufficient",
+      "error": null,
+      "report": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-2-lazyloop/7c4e1869cf5640aebaa11f045559b82e/reports/report.md",
+      "db_path": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-2-lazyloop/memory.sqlite"
+    },
+    {
+      "scenario": "paired_scoped_shift",
+      "trial": 2,
+      "mode": "baseline",
+      "arm_order": [
+        "lazyloop",
+        "baseline",
+        "cache_only"
+      ],
+      "state": "STOPPED",
+      "session_id": "7d6218faef5b4137a9a916c00d3d81f8",
+      "constraints_signature": "6721b842d2f8b6eb90317ed611582d6ea016bd9afd3aa7136b502c350a714c5f",
+      "seed_partitions": {
+        "exploratory_seeds": [
+          10010,
+          10011,
+          10012,
+          10013
+        ],
+        "confirmatory_seeds": [
+          10014,
+          10015,
+          10016
+        ]
+      },
+      "experiment_count": 2,
+      "cache_hits": 0,
+      "model_tokens": 4198,
+      "token_reservations": 4198,
+      "model_calls": 3,
+      "inference_seconds": 114.83350612300092,
+      "wall_seconds": 120.68796438799927,
+      "experiment_seconds": 5.585094146000301,
+      "redundant_proposals": 0,
+      "scientific_cpu_seconds": 4.491333,
+      "peak_memory_bytes": 219090944,
+      "scientific_source_versions": [
+        "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+      ],
+      "quality": {
+        "quality_score": 0.3333333333333333,
+        "quality_score_definition": "Equal-weight independent-seed and reserved-confirmatory-seed coverage, capped at minimum_replications. Coverage is not scientific truth.",
+        "scientific_quality_score": 0.625,
+        "scientific_quality_score_definition": "Predeclared weighted diagnostic: measurement integrity .30, independent confirmation .30, applicable no-shift identity controls .20, claim/evidence calibration .20; inapplicable components are excluded and remaining weights renormalized. No valid measurements scores zero.",
+        "rubric": {
+          "measurement_integrity": {
+            "weight": 0.3,
+            "score": 1.0
+          },
+          "independent_confirmation": {
+            "weight": 0.3,
+            "score": 0.0
+          },
+          "controlled_expected_behavior": {
+            "weight": 0.2,
+            "score": null
+          },
+          "claim_evidence_calibration": {
+            "weight": 0.2,
+            "score": 1.0
+          }
+        },
+        "valid_measurements": 2,
+        "invalid_result_ids": [],
+        "scientific_source_versions": [
+          "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+        ],
+        "independent_seed_count": 2,
+        "protocol_supported_groups": 0,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.2,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 100,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "condition-71a96740d9aebd3e",
+            "independent_confirmatory_seeds": [],
+            "confirmatory_result_ids": [],
+            "confirmatory_mean_delta_brier": null,
+            "confirmatory_std_delta_brier": null,
+            "confirmatory_delta_brier_ci95": null,
+            "protocol_assessment": "INSUFFICIENT_EVIDENCE",
+            "exploratory_result_ids": [
+              "9cc764d51a5940498352953cd8320bc8",
+              "f55fa278f8d14a309904dba4538b0fd3"
+            ],
+            "all_result_ids": [
+              "9cc764d51a5940498352953cd8320bc8",
+              "f55fa278f8d14a309904dba4538b0fd3"
+            ]
+          }
+        ],
+        "control_checks": [],
+        "claim_checks": [
+          {
+            "hypothesis_id": "5c39a92d9d07478cb0dc28bc24e8dfbd",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          },
+          {
+            "hypothesis_id": "b7b55daa3d3448fdb3cdab3c8781ef00",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          }
+        ],
+        "unjustified_established_claims": 0,
+        "model_interpretations_with_invalid_references": 2,
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Scores are a transparent finite benchmark rubric, not a general measure of scientific truth.",
+          "Student-t intervals assume independent seeds sampled from the generator distribution; no multiplicity correction is applied.",
+          "Consistent replicated effects alone do not establish a general law or statistical significance.",
+          "Reusing an exploratory seed invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Maximum planning rounds reached: evidence insufficient",
+      "error": null,
+      "report": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-2-baseline/7d6218faef5b4137a9a916c00d3d81f8/reports/report.md",
+      "db_path": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-2-baseline/memory.sqlite"
+    },
+    {
+      "scenario": "paired_scoped_shift",
+      "trial": 2,
+      "mode": "cache_only",
+      "arm_order": [
+        "lazyloop",
+        "baseline",
+        "cache_only"
+      ],
+      "state": "STOPPED",
+      "session_id": "20c69320f36c4e389c5ba2935592e895",
+      "constraints_signature": "6721b842d2f8b6eb90317ed611582d6ea016bd9afd3aa7136b502c350a714c5f",
+      "seed_partitions": {
+        "exploratory_seeds": [
+          10010,
+          10011,
+          10012,
+          10013
+        ],
+        "confirmatory_seeds": [
+          10014,
+          10015,
+          10016
+        ]
+      },
+      "experiment_count": 2,
+      "cache_hits": 0,
+      "model_tokens": 4406,
+      "token_reservations": 4406,
+      "model_calls": 3,
+      "inference_seconds": 142.8445784580008,
+      "wall_seconds": 147.42556847600008,
+      "experiment_seconds": 4.364847883999573,
+      "redundant_proposals": 0,
+      "scientific_cpu_seconds": 3.60984,
+      "peak_memory_bytes": 219152384,
+      "scientific_source_versions": [
+        "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+      ],
+      "quality": {
+        "quality_score": 0.3333333333333333,
+        "quality_score_definition": "Equal-weight independent-seed and reserved-confirmatory-seed coverage, capped at minimum_replications. Coverage is not scientific truth.",
+        "scientific_quality_score": 0.625,
+        "scientific_quality_score_definition": "Predeclared weighted diagnostic: measurement integrity .30, independent confirmation .30, applicable no-shift identity controls .20, claim/evidence calibration .20; inapplicable components are excluded and remaining weights renormalized. No valid measurements scores zero.",
+        "rubric": {
+          "measurement_integrity": {
+            "weight": 0.3,
+            "score": 1.0
+          },
+          "independent_confirmation": {
+            "weight": 0.3,
+            "score": 0.0
+          },
+          "controlled_expected_behavior": {
+            "weight": 0.2,
+            "score": null
+          },
+          "claim_evidence_calibration": {
+            "weight": 0.2,
+            "score": 1.0
+          }
+        },
+        "valid_measurements": 2,
+        "invalid_result_ids": [],
+        "scientific_source_versions": [
+          "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+        ],
+        "independent_seed_count": 2,
+        "protocol_supported_groups": 0,
+        "groups": [
+          {
+            "parameters": {
+              "class_separation": 1.0,
+              "evaluation_prevalence": 0.2,
+              "feature_count": 6,
+              "logistic_c": 1.0,
+              "noise": 0.0,
+              "probability_temperature": 1.0,
+              "sample_size": 100,
+              "train_prevalence": 0.5
+            },
+            "replicate_group": "condition-71a96740d9aebd3e",
+            "independent_confirmatory_seeds": [],
+            "confirmatory_result_ids": [],
+            "confirmatory_mean_delta_brier": null,
+            "confirmatory_std_delta_brier": null,
+            "confirmatory_delta_brier_ci95": null,
+            "protocol_assessment": "INSUFFICIENT_EVIDENCE",
+            "exploratory_result_ids": [
+              "a9ae6f1590934e60937d0d043562e4b7",
+              "8612c82b45c245ce9e9b38647d4d8960"
+            ],
+            "all_result_ids": [
+              "a9ae6f1590934e60937d0d043562e4b7",
+              "8612c82b45c245ce9e9b38647d4d8960"
+            ]
+          }
+        ],
+        "control_checks": [],
+        "claim_checks": [
+          {
+            "hypothesis_id": "606fc32a9b204bef8056e0a7a5d598cd",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          },
+          {
+            "hypothesis_id": "cba2e07ad005467f85d2867b5dbc0941",
+            "status": "INCONCLUSIVE",
+            "justified": true,
+            "reason": "No established directional claim asserted"
+          }
+        ],
+        "unjustified_established_claims": 0,
+        "model_interpretations_with_invalid_references": 2,
+        "limitations": [
+          "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+          "Scores are a transparent finite benchmark rubric, not a general measure of scientific truth.",
+          "Student-t intervals assume independent seeds sampled from the generator distribution; no multiplicity correction is applied.",
+          "Consistent replicated effects alone do not establish a general law or statistical significance.",
+          "Reusing an exploratory seed invalidates its confirmatory independence."
+        ]
+      },
+      "termination_reason": "Maximum planning rounds reached: evidence insufficient",
+      "error": null,
+      "report": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-2-cache_only/20c69320f36c4e389c5ba2935592e895/reports/report.md",
+      "db_path": "artifacts/verification-v2/autonomous-repeated/paired_scoped_shift-2-cache_only/memory.sqlite"
+    }
+  ],
+  "failed_runs": 0,
+  "successful_runs": 9,
+  "all_runs_failed": false,
+  "paired_comparisons": [
+    {
+      "mode": "cache_only",
+      "valid_pairs": 3,
+      "failed_or_missing_pairs": [],
+      "mean_quality_delta": 0.0,
+      "quality_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "quality_noninferiority_tolerance": 0.05,
+      "per_scenario_quality": {
+        "paired_scoped_shift": {
+          "paired_trials": 3,
+          "mean_delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "mean_wall_fraction_saved": -0.7205266802668767,
+      "wall_fraction_saved_ci95": [
+        -2.1530601484634055,
+        0.7120067879296522
+      ],
+      "mean_execution_fraction_saved": 0.0,
+      "mean_token_fraction_saved": -0.010300129342336225,
+      "token_fraction_saved_ci95": [
+        -0.10753742343581567,
+        0.08693716475114323
+      ],
+      "model_weights_verified": false,
+      "model_identity_note": "At least one arm lacks a recorded weight digest; model tags are not cryptographic weight pinning",
+      "sufficient_confirmatory_coverage": false,
+      "research_hypothesis_verdict": "INSUFFICIENT_CONFIRMATORY_EVIDENCE",
+      "verdict": "QUALITY_NONINFERIOR_UNDER_RUBRIC"
+    },
+    {
+      "mode": "lazyloop",
+      "valid_pairs": 3,
+      "failed_or_missing_pairs": [],
+      "mean_quality_delta": 0.0,
+      "quality_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "quality_noninferiority_tolerance": 0.05,
+      "per_scenario_quality": {
+        "paired_scoped_shift": {
+          "paired_trials": 3,
+          "mean_delta": 0.0,
+          "delta_ci95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "mean_wall_fraction_saved": -0.8044908304793155,
+      "wall_fraction_saved_ci95": [
+        -3.4780727768242534,
+        1.8690911158656225
+      ],
+      "mean_execution_fraction_saved": 0.0,
+      "mean_token_fraction_saved": 0.007357372491944532,
+      "token_fraction_saved_ci95": [
+        -0.10749932864386984,
+        0.12221407362775889
+      ],
+      "model_weights_verified": false,
+      "model_identity_note": "At least one arm lacks a recorded weight digest; model tags are not cryptographic weight pinning",
+      "sufficient_confirmatory_coverage": false,
+      "research_hypothesis_verdict": "INSUFFICIENT_CONFIRMATORY_EVIDENCE",
+      "verdict": "QUALITY_NONINFERIOR_UNDER_RUBRIC"
+    }
+  ],
+  "limitations": [
+    "Scientific scores use a predeclared finite benchmark rubric, not general scientific truth.",
+    "Replay has intentionally repeated proposals and does not establish autonomous model efficiency.",
+    "Student-t intervals assume independent trial differences; no multiplicity adjustment is applied.",
+    "Timing includes process startup; OS caching and scheduling affect duration.",
+    "Autonomous trajectories may differ despite identical constraints; fewer than three successful paired trials cannot establish quality preservation."
+  ]
+}

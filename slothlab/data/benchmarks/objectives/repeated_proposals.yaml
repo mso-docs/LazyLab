@@ -1,0 +1,26 @@
+objective:
+  title: Repeated proposals and no-progress stopping
+  permitted_parameters:
+    train_prevalence:
+    - 0.5
+    evaluation_prevalence:
+    - 0.2
+    sample_size:
+    - 500
+    feature_count:
+    - 6
+    class_separation:
+    - 1.0
+    noise:
+    - 0.0
+    logistic_c:
+    - 1.0
+    probability_temperature:
+    - 1.0
+  question: Can the controller reuse exact evidence and stop repeated planning without
+    asserting scientific certainty?
+budget:
+  max_experiments: 12
+  max_rounds: 20
+  max_tokens: 20000
+  no_progress_rounds: 3

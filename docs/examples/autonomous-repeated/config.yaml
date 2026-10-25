@@ -1,0 +1,26 @@
+model: qwen3:0.6b
+inference_thinking: false
+inference_threads: 4
+inference_timeout_seconds: 180
+objective:
+  title: Matched autonomous seed selection under prevalence shift
+  question: Investigate whether oracle prior correction can improve or worsen Brier score under this controlled condition. Use independent seeds to assess reproducibility, update hypotheses when evidence conflicts, and report insufficient evidence when the budget cannot establish a claim.
+  permitted_parameters:
+    sample_size: [100]
+    train_prevalence: [0.5]
+    evaluation_prevalence: [0.2]
+    feature_count: [6]
+    class_separation: [1.0]
+    noise: [0.0]
+    logistic_c: [1.0]
+    probability_temperature: [1.0]
+budget:
+  max_experiments: 2
+  max_rounds: 1
+  max_candidates: 2
+  max_tokens: 20000
+  call_token_reserve: 1000
+  wall_seconds: 300
+  experiment_timeout: 20
+exploratory_seeds: [0, 1, 2, 3]
+confirmatory_seeds: [10000, 10001, 10002]

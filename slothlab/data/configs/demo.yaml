@@ -1,0 +1,30 @@
+# Export OLLAMA_MODEL to choose an installed model. No model is downloaded.
+objective:
+  title: A reproducible effect under controlled prevalence shift
+  question: Find an authorized synthetic condition and characterize whether oracle prior correction improves, worsens, or leaves Brier score unchanged. Explore first, then use one final independent confirmation batch. Scope conclusions to the tested conditions.
+  permitted_parameters:
+    train_prevalence: [0.5]
+    evaluation_prevalence: [0.2, 0.5, 0.8]
+    sample_size: [500, 1000]
+    feature_count: [6]
+    class_separation: [1.0]
+    noise: [0.0]
+    logistic_c: [1.0]
+    probability_temperature: [1.0, 2.0]
+  success_criteria:
+    minimum_replications: 3
+    minimum_exploratory_experiments: 3
+    minimum_conditions: 1
+    require_confirmation: true
+    minimum_confirmatory_groups: 1
+    effect_direction: either
+budget:
+  max_experiments: 9
+  max_rounds: 6
+  max_candidates: 3
+  wall_seconds: 1200
+  max_tokens: 30000
+  call_token_reserve: 2000
+  repair_attempts: 2
+  no_progress_rounds: 3
+  minimum_replications: 3

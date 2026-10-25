@@ -1,0 +1,32 @@
+{
+  "behavior_fixture": "invalid_parameters",
+  "schedule": [
+    {
+      "phase": "exploratory",
+      "seed": 0,
+      "parameters": {
+        "sample_size": 1
+      }
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0,
+      "parameters": {
+        "sample_size": 500
+      }
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0,
+      "experiment_family": "unregistered"
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0
+    }
+  ],
+  "expected_behavior": {
+    "all_mode_executions": 1,
+    "minimum_rejections": 3
+  }
+}

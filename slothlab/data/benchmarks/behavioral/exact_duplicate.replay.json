@@ -1,0 +1,18 @@
+{
+  "behavior_fixture": "exact_duplicate",
+  "schedule": [
+    {
+      "phase": "exploratory",
+      "seed": 0
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0
+    }
+  ],
+  "expected_behavior": {
+    "baseline_executions": 2,
+    "optimized_executions": 1,
+    "optimized_reuses": 1
+  }
+}

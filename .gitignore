@@ -1,0 +1,45 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.env
+artifacts/
+*.sqlite*
+
+build/
+dist/
+.streamlit/secrets.toml
+
+# Local credentials and environment overrides (keep the public template).
+.env.*
+!.env.example
+secrets.toml
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/
+
+# Personal research, profiles, portable exports, and runtime output.
+/profiles/
+/guest-*/
+/slothlab-guest-*/
+/research-*/
+profile.json
+research.json
+*.db
+*.db-*
+*.sqlite*
+*.zip
+*.log
+/backup/
+/backups/
+
+# Local tooling and operating-system caches.
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.DS_Store
+Thumbs.db

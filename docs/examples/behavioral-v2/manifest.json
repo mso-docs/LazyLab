@@ -1,0 +1,88 @@
+{
+  "protocol": "MVP specification section15 behavioral benchmark fixtures",
+  "fixture_count": 8,
+  "fixtures": [
+    {
+      "id": "exact_duplicate",
+      "configuration": "exact_duplicate.yaml",
+      "protocol": "exact_duplicate.replay.json",
+      "expected_behavior": {
+        "baseline_executions": 2,
+        "optimized_executions": 1,
+        "optimized_reuses": 1
+      }
+    },
+    {
+      "id": "valid_replication",
+      "configuration": "valid_replication.yaml",
+      "protocol": "valid_replication.replay.json",
+      "expected_behavior": {
+        "all_mode_executions": 3,
+        "independent_seeds": 3,
+        "no_reuse": true
+      }
+    },
+    {
+      "id": "contradictory_evidence",
+      "configuration": "contradictory_evidence.yaml",
+      "protocol": "contradictory_evidence.replay.json",
+      "expected_behavior": {
+        "all_mode_executions": 2,
+        "retain_all_metrics": true,
+        "established_claims": 0
+      }
+    },
+    {
+      "id": "invalid_parameters",
+      "configuration": "invalid_parameters.yaml",
+      "protocol": "invalid_parameters.replay.json",
+      "expected_behavior": {
+        "all_mode_executions": 1,
+        "minimum_rejections": 3
+      }
+    },
+    {
+      "id": "repeated_planning",
+      "configuration": "repeated_planning.yaml",
+      "protocol": "repeated_planning.replay.json",
+      "expected_behavior": {
+        "baseline_executions": 6,
+        "optimized_executions": 1,
+        "lazyloop_max_reuses": 3,
+        "evidence_insufficient": true
+      }
+    },
+    {
+      "id": "resource_constraints",
+      "configuration": "resource_constraints.yaml",
+      "protocol": "resource_constraints.replay.json",
+      "expected_behavior": {
+        "all_mode_executions": 1,
+        "minimum_deferrals": 1,
+        "expensive_seed_must_not_execute": 0
+      }
+    },
+    {
+      "id": "evidence_sufficiency",
+      "configuration": "evidence_sufficiency.yaml",
+      "protocol": "evidence_sufficiency.replay.json",
+      "expected_behavior": {
+        "all_mode_executions": 4,
+        "terminal_state": "COMPLETED",
+        "confirmations": 3
+      }
+    },
+    {
+      "id": "premature_stop_risk",
+      "configuration": "premature_stop_risk.yaml",
+      "protocol": "premature_stop_risk.replay.json",
+      "expected_behavior": {
+        "baseline_executions": 8,
+        "optimized_executions": 5,
+        "terminal_state": "COMPLETED",
+        "confirmations": 4,
+        "premature_stops": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "protocol": "predeclared fixed proposals; real science, no model reasoning",
+  "schedule": [
+    {
+      "phase": "exploratory",
+      "seed": 0,
+      "parameters": {
+        "sample_size": 100
+      },
+      "replicate_group": "sample-100"
+    },
+    {
+      "phase": "exploratory",
+      "seed": 1,
+      "parameters": {
+        "sample_size": 100
+      },
+      "replicate_group": "sample-100"
+    },
+    {
+      "phase": "exploratory",
+      "seed": 2,
+      "parameters": {
+        "sample_size": 100
+      },
+      "replicate_group": "sample-100"
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10000,
+      "parameters": {
+        "sample_size": 100
+      },
+      "replicate_group": "sample-100"
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10001,
+      "parameters": {
+        "sample_size": 100
+      },
+      "replicate_group": "sample-100"
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10002,
+      "parameters": {
+        "sample_size": 100
+      },
+      "replicate_group": "sample-100"
+    },
+    {
+      "phase": "exploratory",
+      "seed": 0,
+      "parameters": {
+        "sample_size": 2000
+      },
+      "replicate_group": "sample-2000"
+    },
+    {
+      "phase": "exploratory",
+      "seed": 1,
+      "parameters": {
+        "sample_size": 2000
+      },
+      "replicate_group": "sample-2000"
+    },
+    {
+      "phase": "exploratory",
+      "seed": 2,
+      "parameters": {
+        "sample_size": 2000
+      },
+      "replicate_group": "sample-2000"
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10000,
+      "parameters": {
+        "sample_size": 2000
+      },
+      "replicate_group": "sample-2000"
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10001,
+      "parameters": {
+        "sample_size": 2000
+      },
+      "replicate_group": "sample-2000"
+    },
+    {
+      "phase": "confirmatory",
+      "seed": 10002,
+      "parameters": {
+        "sample_size": 2000
+      },
+      "replicate_group": "sample-2000"
+    }
+  ]
+}

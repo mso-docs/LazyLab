@@ -1,0 +1,870 @@
+{
+  "generated_at": "2026-10-25T20:04:13.160676+00:00",
+  "session": {
+    "id": "5bee1711d22248aabfb5ec9b2b32f375",
+    "objective_id": "6433090b46b647c6815b997e672a26a8",
+    "state": "COMPLETED",
+    "model_name": "qwen3:0.6b",
+    "mode": "lazyloop",
+    "budget_configuration": {
+      "max_experiments": 6,
+      "max_rounds": 3,
+      "max_candidates": 3,
+      "wall_seconds": 600.0,
+      "max_tokens": 30000,
+      "call_token_reserve": 2000,
+      "repair_attempts": 2,
+      "no_progress_rounds": 3,
+      "experiment_timeout": 20.0,
+      "memory_mb": 2048,
+      "minimum_replications": 3
+    },
+    "budget_consumed": {
+      "experiments": 5,
+      "tokens": 10712,
+      "token_reservations": 10712,
+      "wall_seconds": 430.49328365400015,
+      "cache_hits": 1,
+      "model_calls": 5,
+      "inference_seconds": 410.86193846899914,
+      "low_information_rounds": 0
+    },
+    "iteration_count": 2,
+    "no_progress_count": 0,
+    "started_at": "2026-10-25T19:37:55.448464+00:00",
+    "last_checkpoint": "2026-10-25T19:45:05.941797+00:00",
+    "termination_reason": "Predeclared operational research criteria satisfied; conclusions are scoped to the tested conditions"
+  },
+  "objective": {
+    "id": "6433090b46b647c6815b997e672a26a8",
+    "title": "Independent confirmation of a scoped prevalence-shift condition",
+    "question": "Characterize whether oracle correction consistently improves or worsens Brier score for this one authorized synthetic condition. Explore first, then perform a final batch with three distinct reserved confirmation seeds. Preserve uncertainty about generalization.",
+    "experiment_family": "prior_correction",
+    "primary_metric": "delta_brier",
+    "permitted_parameters": {
+      "sample_size": [
+        500
+      ],
+      "train_prevalence": [
+        0.5
+      ],
+      "evaluation_prevalence": [
+        0.2
+      ],
+      "feature_count": [
+        6
+      ],
+      "class_separation": [
+        1.0
+      ],
+      "noise": [
+        0.0
+      ],
+      "logistic_c": [
+        1.0
+      ],
+      "probability_temperature": [
+        1.0
+      ]
+    },
+    "constraints": {},
+    "success_criteria": {
+      "minimum_replications": 3,
+      "minimum_conditions": 1,
+      "minimum_exploratory_experiments": 1,
+      "require_confirmation": true,
+      "minimum_confirmatory_groups": 1,
+      "effect_direction": "either"
+    }
+  },
+  "hypotheses": [
+    {
+      "id": "bde7447e5f014360a159c1ec89bd02d6",
+      "session_id": "5bee1711d22248aabfb5ec9b2b32f375",
+      "statement": "Hypothesis 1: Oracle correction may improve Brier score when applied to the synthetic condition.",
+      "falsifiable_prediction": "negative",
+      "expected_delta_direction": "negative",
+      "assumptions": [
+        "The synthetic condition is well-defined and controlled.",
+        "The oracle correction is applied in a controlled manner."
+      ],
+      "status": "INCONCLUSIVE",
+      "created_at": "2026-10-25T19:38:15.719735+00:00"
+    },
+    {
+      "id": "865f187e4e1f4dd697195d1df7be4068",
+      "session_id": "5bee1711d22248aabfb5ec9b2b32f375",
+      "statement": "Hypothesis 2: Oracle correction may fail to improve Brier score when applied to the synthetic condition.",
+      "falsifiable_prediction": "positive",
+      "expected_delta_direction": "positive",
+      "assumptions": [
+        "The synthetic condition is well-defined and controlled.",
+        "The oracle correction is applied in a controlled manner."
+      ],
+      "status": "INCONCLUSIVE",
+      "created_at": "2026-10-25T19:38:15.721613+00:00"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "257ce44458d04bebb9e7aea552bfdc36",
+      "hypothesis_id": "bde7447e5f014360a159c1ec89bd02d6",
+      "experiment_family": "prior_correction",
+      "dataset_id": "synthetic-label-shift-v1",
+      "protocol_version": "1",
+      "parameters": {
+        "train_prevalence": 0.5,
+        "evaluation_prevalence": 0.2,
+        "sample_size": 500,
+        "feature_count": 6,
+        "class_separation": 1.0,
+        "noise": 0.0,
+        "logistic_c": 1.0,
+        "probability_temperature": 1.0
+      },
+      "seed": 1,
+      "phase": "exploratory",
+      "replicate_group": "condition-8a778f0b2fb15140",
+      "estimated_compute_seconds": 1.0,
+      "rationale": "This experiment tests the hypothesis that oracle correction may improve Brier score under the synthetic condition. The parameters are chosen to align with the evidence provided, ensuring reproducibility with different seeds."
+    },
+    {
+      "id": "e1fe8770176c474083795a2672fc3df8",
+      "hypothesis_id": "865f187e4e1f4dd697195d1df7be4068",
+      "experiment_family": "prior_correction",
+      "dataset_id": "synthetic-label-shift-v1",
+      "protocol_version": "1",
+      "parameters": {
+        "train_prevalence": 0.5,
+        "evaluation_prevalence": 0.2,
+        "sample_size": 500,
+        "feature_count": 6,
+        "class_separation": 1.0,
+        "noise": 0.0,
+        "logistic_c": 1.0,
+        "probability_temperature": 1.0
+      },
+      "seed": 2,
+      "phase": "exploratory",
+      "replicate_group": "condition-8a778f0b2fb15140",
+      "estimated_compute_seconds": 1.0,
+      "rationale": "This experiment tests the hypothesis that oracle correction may fail to improve Brier score under the synthetic condition. The parameters are chosen to align with the evidence provided, ensuring reproducibility with different seeds."
+    },
+    {
+      "id": "6299981e4f7d467fb11aed68d8f60156",
+      "hypothesis_id": "bde7447e5f014360a159c1ec89bd02d6",
+      "experiment_family": "prior_correction",
+      "dataset_id": "synthetic-label-shift-v1",
+      "protocol_version": "1",
+      "parameters": {
+        "train_prevalence": 0.5,
+        "evaluation_prevalence": 0.2,
+        "sample_size": 500,
+        "feature_count": 6,
+        "class_separation": 1.0,
+        "noise": 0.0,
+        "logistic_c": 1.0,
+        "probability_temperature": 1.0
+      },
+      "seed": 1,
+      "phase": "exploratory",
+      "replicate_group": "condition-8a778f0b2fb15140",
+      "estimated_compute_seconds": 1.0,
+      "rationale": "This experiment tests the hypothesis that oracle correction may improve Brier score under the synthetic condition. The parameters are chosen to align with the evidence provided, ensuring reproducibility with different seeds."
+    },
+    {
+      "id": "3dd21c2d6d524fa08e1c12d951f57a8e",
+      "hypothesis_id": "bde7447e5f014360a159c1ec89bd02d6",
+      "experiment_family": "prior_correction",
+      "dataset_id": "synthetic-label-shift-v1",
+      "protocol_version": "1",
+      "parameters": {
+        "train_prevalence": 0.5,
+        "evaluation_prevalence": 0.2,
+        "sample_size": 500,
+        "feature_count": 6,
+        "class_separation": 1.0,
+        "noise": 0.0,
+        "logistic_c": 1.0,
+        "probability_temperature": 1.0
+      },
+      "seed": 10000,
+      "phase": "confirmatory",
+      "replicate_group": "condition-8a778f0b2fb15140",
+      "estimated_compute_seconds": 1.0,
+      "rationale": "Replicating the condition with a new seed to test the hypothesis under the same parameters, ensuring reproducibility and validation of the hypothesis."
+    },
+    {
+      "id": "9fac6670812a44fe8b9147bce4db0d1d",
+      "hypothesis_id": "865f187e4e1f4dd697195d1df7be4068",
+      "experiment_family": "prior_correction",
+      "dataset_id": "synthetic-label-shift-v1",
+      "protocol_version": "1",
+      "parameters": {
+        "train_prevalence": 0.5,
+        "evaluation_prevalence": 0.2,
+        "sample_size": 500,
+        "feature_count": 6,
+        "class_separation": 1.0,
+        "noise": 0.0,
+        "logistic_c": 1.0,
+        "probability_temperature": 1.0
+      },
+      "seed": 10001,
+      "phase": "confirmatory",
+      "replicate_group": "condition-8a778f0b2fb15140",
+      "estimated_compute_seconds": 1.0,
+      "rationale": "Replicating the condition with a new seed to test the hypothesis under the same parameters, ensuring reproducibility and validation of the hypothesis."
+    },
+    {
+      "id": "5ad9be1224004f91b46df8778e61b942",
+      "hypothesis_id": "bde7447e5f014360a159c1ec89bd02d6",
+      "experiment_family": "prior_correction",
+      "dataset_id": "synthetic-label-shift-v1",
+      "protocol_version": "1",
+      "parameters": {
+        "train_prevalence": 0.5,
+        "evaluation_prevalence": 0.2,
+        "sample_size": 500,
+        "feature_count": 6,
+        "class_separation": 1.0,
+        "noise": 0.0,
+        "logistic_c": 1.0,
+        "probability_temperature": 1.0
+      },
+      "seed": 10002,
+      "phase": "confirmatory",
+      "replicate_group": "condition-8a778f0b2fb15140",
+      "estimated_compute_seconds": 1.0,
+      "rationale": "Replicating the condition with a new seed to test the hypothesis under the same parameters, ensuring reproducibility and validation of the hypothesis."
+    }
+  ],
+  "results": [
+    {
+      "id": "36aebdde38394f99bea8e1bedf469ccd",
+      "experiment_id": "257ce44458d04bebb9e7aea552bfdc36",
+      "fingerprint": "842fb7b4a5e5c7594bc4fda18945b56ffabc529dd990cfb55b66c012a5d29ab5",
+      "status": "COMPLETED",
+      "metrics": {
+        "baseline_brier": 0.056792255482151104,
+        "corrected_brier": 0.043257585394134206,
+        "baseline_log_loss": 0.18847190732176733,
+        "corrected_log_loss": 0.14794707791456643,
+        "sample_size": 500.0,
+        "seed": 1.0,
+        "actual_train_prevalence": 0.5,
+        "oracle_evaluation_prevalence": 0.2,
+        "delta_brier": -0.013534670088016898,
+        "delta_log_loss": -0.040524829407200896
+      },
+      "runtime_seconds": 3.523577906000355,
+      "artifact_paths": [
+        "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/77f8118c5ee57168237085f6/data.npz",
+        "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/77f8118c5ee57168237085f6/spec.json"
+      ],
+      "environment_metadata": {
+        "python": "3.14.4",
+        "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+        "dependencies": {
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "scikit-learn": "1.9.1"
+        },
+        "source_sha256": "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9",
+        "oracle_prevalence": true,
+        "isolation": "bubblewrap",
+        "execution_boundary": {
+          "backend": "bubblewrap",
+          "os_filesystem_isolation": true,
+          "os_network_isolation": true,
+          "fallback_reason": null
+        },
+        "artifact_sha256": {
+          "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/77f8118c5ee57168237085f6/data.npz": "71bea61ebecfd13d2fceca615e1845d38d7fc8fba48935da2387c4793532b6a0",
+          "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/77f8118c5ee57168237085f6/spec.json": "a3a4ca40b208e14f0c224031d157cf3cc1a9722f0b37c9cb040d811e396b1f90"
+        },
+        "resource_limits": "RLIMIT_AS, RLIMIT_CPU, RLIMIT_CORE",
+        "network_guard": "Python audit hook; OS network isolation depends on selected backend",
+        "resource_usage": {
+          "cpu_seconds": 2.806206,
+          "peak_memory_bytes": 219492352
+        },
+        "scientific_runtime_seconds": 0.05442912099988462
+      },
+      "created_at": "2026-10-25T19:39:16.160405+00:00",
+      "error_details": null
+    },
+    {
+      "id": "4ec1310ba8fb4ea896ed9000f2a3dd6c",
+      "experiment_id": "e1fe8770176c474083795a2672fc3df8",
+      "fingerprint": "938c2dc7a24647dd3f8fcd140b82a9a0a36dbac8f26d38f260fe120391e8f245",
+      "status": "COMPLETED",
+      "metrics": {
+        "baseline_brier": 0.05490766671574067,
+        "corrected_brier": 0.04096341146546898,
+        "baseline_log_loss": 0.18720100908643378,
+        "corrected_log_loss": 0.13500933923152708,
+        "sample_size": 500.0,
+        "seed": 2.0,
+        "actual_train_prevalence": 0.5,
+        "oracle_evaluation_prevalence": 0.2,
+        "delta_brier": -0.013944255250271688,
+        "delta_log_loss": -0.0521916698549067
+      },
+      "runtime_seconds": 3.5031105139996725,
+      "artifact_paths": [
+        "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/9d5346be195c367bea8732b7/data.npz",
+        "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/9d5346be195c367bea8732b7/spec.json"
+      ],
+      "environment_metadata": {
+        "python": "3.14.4",
+        "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+        "dependencies": {
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "scikit-learn": "1.9.1"
+        },
+        "source_sha256": "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9",
+        "oracle_prevalence": true,
+        "isolation": "bubblewrap",
+        "execution_boundary": {
+          "backend": "bubblewrap",
+          "os_filesystem_isolation": true,
+          "os_network_isolation": true,
+          "fallback_reason": null
+        },
+        "artifact_sha256": {
+          "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/9d5346be195c367bea8732b7/data.npz": "3565813dc4e7c6d1858202b3da1f2ec8e791cc240e82c468c148bbf6790d11fa",
+          "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/9d5346be195c367bea8732b7/spec.json": "f8215d3fd00e2c591fcccecd294d7fbe0f90ea8e8203bdcce4b03b44b1365323"
+        },
+        "resource_limits": "RLIMIT_AS, RLIMIT_CPU, RLIMIT_CORE",
+        "network_guard": "Python audit hook; OS network isolation depends on selected backend",
+        "resource_usage": {
+          "cpu_seconds": 2.91031,
+          "peak_memory_bytes": 219332608
+        },
+        "scientific_runtime_seconds": 0.05415060499944957
+      },
+      "created_at": "2026-10-25T19:39:19.779719+00:00",
+      "error_details": null
+    },
+    {
+      "id": "744c075075104ca28d1e4a7808397257",
+      "experiment_id": "3dd21c2d6d524fa08e1c12d951f57a8e",
+      "fingerprint": "589750d9ac8bcf01e81f3c939cfafe7b4544babc55fc99b9bc3f7c6b1065726b",
+      "status": "COMPLETED",
+      "metrics": {
+        "baseline_brier": 0.028320795609508488,
+        "corrected_brier": 0.027465207626232394,
+        "baseline_log_loss": 0.09639415831996297,
+        "corrected_log_loss": 0.08975630949930366,
+        "sample_size": 500.0,
+        "seed": 10000.0,
+        "actual_train_prevalence": 0.5,
+        "oracle_evaluation_prevalence": 0.2,
+        "delta_brier": -0.0008555879832760939,
+        "delta_log_loss": -0.006637848820659306
+      },
+      "runtime_seconds": 4.302560132000508,
+      "artifact_paths": [
+        "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/f68c3b7905f5d58caeb4b1d8/data.npz",
+        "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/f68c3b7905f5d58caeb4b1d8/spec.json"
+      ],
+      "environment_metadata": {
+        "python": "3.14.4",
+        "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+        "dependencies": {
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "scikit-learn": "1.9.1"
+        },
+        "source_sha256": "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9",
+        "oracle_prevalence": true,
+        "isolation": "bubblewrap",
+        "execution_boundary": {
+          "backend": "bubblewrap",
+          "os_filesystem_isolation": true,
+          "os_network_isolation": true,
+          "fallback_reason": null
+        },
+        "artifact_sha256": {
+          "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/f68c3b7905f5d58caeb4b1d8/data.npz": "67eaedf515de77a0932eb9e43ad51d4d4ed3b1845c2b6b3018496361067bc19c",
+          "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/f68c3b7905f5d58caeb4b1d8/spec.json": "d3d466afb93f0451382478d4f891edcf19ebfce531513589a8916cdf186f2c85"
+        },
+        "resource_limits": "RLIMIT_AS, RLIMIT_CPU, RLIMIT_CORE",
+        "network_guard": "Python audit hook; OS network isolation depends on selected backend",
+        "resource_usage": {
+          "cpu_seconds": 3.297107,
+          "peak_memory_bytes": 219316224
+        },
+        "scientific_runtime_seconds": 0.05722127500030183
+      },
+      "created_at": "2026-10-25T19:42:53.751956+00:00",
+      "error_details": null
+    },
+    {
+      "id": "d8b4148fa4754c0895627673fd362565",
+      "experiment_id": "9fac6670812a44fe8b9147bce4db0d1d",
+      "fingerprint": "799e46b0e31368ab48b84208926f1f429e86bda3b5bb29ff4cca94a1fbb6556d",
+      "status": "COMPLETED",
+      "metrics": {
+        "baseline_brier": 0.06234832296811552,
+        "corrected_brier": 0.04963446245663984,
+        "baseline_log_loss": 0.20174163660169958,
+        "corrected_log_loss": 0.16057205188090348,
+        "sample_size": 500.0,
+        "seed": 10001.0,
+        "actual_train_prevalence": 0.5,
+        "oracle_evaluation_prevalence": 0.2,
+        "delta_brier": -0.012713860511475682,
+        "delta_log_loss": -0.0411695847207961
+      },
+      "runtime_seconds": 3.694448540999474,
+      "artifact_paths": [
+        "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/33dbd47ebccd85852a43fa6a/data.npz",
+        "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/33dbd47ebccd85852a43fa6a/spec.json"
+      ],
+      "environment_metadata": {
+        "python": "3.14.4",
+        "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+        "dependencies": {
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "scikit-learn": "1.9.1"
+        },
+        "source_sha256": "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9",
+        "oracle_prevalence": true,
+        "isolation": "bubblewrap",
+        "execution_boundary": {
+          "backend": "bubblewrap",
+          "os_filesystem_isolation": true,
+          "os_network_isolation": true,
+          "fallback_reason": null
+        },
+        "artifact_sha256": {
+          "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/33dbd47ebccd85852a43fa6a/data.npz": "091c81966a5f16f3333f6fd689bb824a7ba05df6581ac6af5d3c77680701312d",
+          "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/33dbd47ebccd85852a43fa6a/spec.json": "d8ca049f6b677a61ada97609ac97bec4b8099982ea90f61452a005d2b74f4539"
+        },
+        "resource_limits": "RLIMIT_AS, RLIMIT_CPU, RLIMIT_CORE",
+        "network_guard": "Python audit hook; OS network isolation depends on selected backend",
+        "resource_usage": {
+          "cpu_seconds": 3.110244,
+          "peak_memory_bytes": 219361280
+        },
+        "scientific_runtime_seconds": 0.0545599740007674
+      },
+      "created_at": "2026-10-25T19:42:57.528470+00:00",
+      "error_details": null
+    },
+    {
+      "id": "7182df0645044e3e83c4ba04e9a74fff",
+      "experiment_id": "5ad9be1224004f91b46df8778e61b942",
+      "fingerprint": "5662beff8a46464b13024b7ee9ea049f3825437c7a6b9f0fa61c6f32f79a5335",
+      "status": "COMPLETED",
+      "metrics": {
+        "baseline_brier": 0.02974805740022955,
+        "corrected_brier": 0.024757271076680958,
+        "baseline_log_loss": 0.10899255443696228,
+        "corrected_log_loss": 0.08822850086260892,
+        "sample_size": 500.0,
+        "seed": 10002.0,
+        "actual_train_prevalence": 0.5,
+        "oracle_evaluation_prevalence": 0.2,
+        "delta_brier": -0.004990786323548591,
+        "delta_log_loss": -0.02076405357435336
+      },
+      "runtime_seconds": 3.8298378830004367,
+      "artifact_paths": [
+        "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/6603b7f598a5778dc5e923d2/data.npz",
+        "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/6603b7f598a5778dc5e923d2/spec.json"
+      ],
+      "environment_metadata": {
+        "python": "3.14.4",
+        "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+        "dependencies": {
+          "numpy": "2.5.4",
+          "scipy": "1.18.1",
+          "scikit-learn": "1.9.1"
+        },
+        "source_sha256": "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9",
+        "oracle_prevalence": true,
+        "isolation": "bubblewrap",
+        "execution_boundary": {
+          "backend": "bubblewrap",
+          "os_filesystem_isolation": true,
+          "os_network_isolation": true,
+          "fallback_reason": null
+        },
+        "artifact_sha256": {
+          "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/6603b7f598a5778dc5e923d2/data.npz": "08e60ff27124c17e60fd9cd7cec2b542d246edf1fe7f6bd788bbe6e24eec2661",
+          "artifacts/verification/iteration/completion-correlated/5bee1711d22248aabfb5ec9b2b32f375/experiments/6603b7f598a5778dc5e923d2/spec.json": "528387752be4939a397ef9a46ab1796a2c576de8da19f015aa4ab4cb1b8770ac"
+        },
+        "resource_limits": "RLIMIT_AS, RLIMIT_CPU, RLIMIT_CORE",
+        "network_guard": "Python audit hook; OS network isolation depends on selected backend",
+        "resource_usage": {
+          "cpu_seconds": 3.149909,
+          "peak_memory_bytes": 219226112
+        },
+        "scientific_runtime_seconds": 0.047383899000124075
+      },
+      "created_at": "2026-10-25T19:43:01.430333+00:00",
+      "error_details": null
+    }
+  ],
+  "decisions": [
+    {
+      "experiment_id": "257ce44458d04bebb9e7aea552bfdc36",
+      "session_id": "5bee1711d22248aabfb5ec9b2b32f375",
+      "decision": "EXECUTE",
+      "reason": "Authorized feasible candidate",
+      "evidence_references": [],
+      "priority_score": 0.8650000000000001,
+      "score_components": {
+        "information": 0.65,
+        "novelty": 1.0,
+        "relevance": 1.0,
+        "feasibility": 1.0,
+        "cost": 0.05
+      },
+      "estimated_cost": 1.0,
+      "available_budget": {
+        "wall_seconds": 522.8883345509994,
+        "experiments": 6
+      },
+      "timestamp": "2026-10-25T19:39:12.569378+00:00"
+    },
+    {
+      "experiment_id": "e1fe8770176c474083795a2672fc3df8",
+      "session_id": "5bee1711d22248aabfb5ec9b2b32f375",
+      "decision": "REPLICATE",
+      "reason": "Independent seed under identical conditions",
+      "evidence_references": [
+        "36aebdde38394f99bea8e1bedf469ccd"
+      ],
+      "priority_score": 0.86,
+      "score_components": {
+        "information": 0.85,
+        "novelty": 0.75,
+        "relevance": 1.0,
+        "feasibility": 1.0,
+        "cost": 0.05
+      },
+      "estimated_cost": 1.0,
+      "available_budget": {
+        "wall_seconds": 519.2746760939999,
+        "experiments": 5
+      },
+      "timestamp": "2026-10-25T19:39:16.230208+00:00"
+    },
+    {
+      "experiment_id": "6299981e4f7d467fb11aed68d8f60156",
+      "session_id": "5bee1711d22248aabfb5ec9b2b32f375",
+      "decision": "REUSE",
+      "reason": "Verified exact experiment already completed",
+      "evidence_references": [
+        "36aebdde38394f99bea8e1bedf469ccd"
+      ],
+      "priority_score": 0.0,
+      "score_components": {
+        "information": 0.0,
+        "novelty": 0.0,
+        "relevance": 1.0,
+        "feasibility": 1.0,
+        "cost": 0.0
+      },
+      "estimated_cost": 1.0,
+      "available_budget": {
+        "wall_seconds": 515.6408105289993,
+        "experiments": 4
+      },
+      "timestamp": "2026-10-25T19:39:19.824769+00:00"
+    },
+    {
+      "experiment_id": "3dd21c2d6d524fa08e1c12d951f57a8e",
+      "session_id": "5bee1711d22248aabfb5ec9b2b32f375",
+      "decision": "EXECUTE",
+      "reason": "Authorized feasible candidate",
+      "evidence_references": [],
+      "priority_score": 0.9525,
+      "score_components": {
+        "information": 0.9,
+        "novelty": 1.0,
+        "relevance": 1.0,
+        "feasibility": 1.0,
+        "cost": 0.05
+      },
+      "estimated_cost": 1.0,
+      "available_budget": {
+        "wall_seconds": 306.0538550889996,
+        "experiments": 4
+      },
+      "timestamp": "2026-10-25T19:42:49.406105+00:00"
+    },
+    {
+      "experiment_id": "9fac6670812a44fe8b9147bce4db0d1d",
+      "session_id": "5bee1711d22248aabfb5ec9b2b32f375",
+      "decision": "REPLICATE",
+      "reason": "Independent seed under identical conditions",
+      "evidence_references": [
+        "744c075075104ca28d1e4a7808397257"
+      ],
+      "priority_score": 0.8775000000000001,
+      "score_components": {
+        "information": 0.9,
+        "novelty": 0.75,
+        "relevance": 1.0,
+        "feasibility": 1.0,
+        "cost": 0.05
+      },
+      "estimated_cost": 1.0,
+      "available_budget": {
+        "wall_seconds": 301.67702089499926,
+        "experiments": 3
+      },
+      "timestamp": "2026-10-25T19:42:53.786906+00:00"
+    },
+    {
+      "experiment_id": "5ad9be1224004f91b46df8778e61b942",
+      "session_id": "5bee1711d22248aabfb5ec9b2b32f375",
+      "decision": "REPLICATE",
+      "reason": "Independent seed under identical conditions",
+      "evidence_references": [
+        "744c075075104ca28d1e4a7808397257",
+        "d8b4148fa4754c0895627673fd362565"
+      ],
+      "priority_score": 0.8775000000000001,
+      "score_components": {
+        "information": 0.9,
+        "novelty": 0.75,
+        "relevance": 1.0,
+        "feasibility": 1.0,
+        "cost": 0.05
+      },
+      "estimated_cost": 1.0,
+      "available_budget": {
+        "wall_seconds": 297.89930458099934,
+        "experiments": 2
+      },
+      "timestamp": "2026-10-25T19:42:57.562064+00:00"
+    }
+  ],
+  "interpretations": [
+    {
+      "hypothesis_id": "bde7447e5f014360a159c1ec89bd02d6",
+      "status": "CONTRADICTED",
+      "evidence_ids": [
+        "36aebdde38394f99bea8e1bedf469ccd",
+        "4ec1310ba8fb4ea896ed9000f2a3dd6c"
+      ],
+      "explanation": "The evidence shows that oracle correction consistently improves Brier score when applied to the synthetic condition. The corrected_brier value is lower than the baseline, indicating a potential improvement.",
+      "revised_statement": null,
+      "revised_prediction": null,
+      "revised_direction": null,
+      "references_valid": false,
+      "verified_claim": false
+    },
+    {
+      "hypothesis_id": "865f187e4e1f4dd697195d1df7be4068",
+      "status": "INCONCLUSIVE",
+      "evidence_ids": [
+        "257ce44458d04bebb9e7aea552bfdc36",
+        "e1fe8770176c474083795a2672fc3df8"
+      ],
+      "explanation": "The evidence shows that oracle correction may improve Brier score when applied to the synthetic condition. The corrected_brier value is lower than the baseline, indicating a potential improvement.",
+      "revised_statement": null,
+      "revised_prediction": null,
+      "revised_direction": null,
+      "references_valid": false,
+      "verified_claim": false
+    },
+    {
+      "hypothesis_id": "bde7447e5f014360a159c1ec89bd02d6",
+      "status": "CONTRADICTED",
+      "evidence_ids": [
+        "36aebdde38394f99bea8e1bedf469ccd",
+        "4ec1310ba8fb4ea896ed9000f2a3dd6c",
+        "744c075075104ca28d1e4a7808397257",
+        "d8b4148fa4754c0895627673fd362565",
+        "7182df0645044e3e83c4ba04e9a74fff"
+      ],
+      "explanation": "The evidence shows that oracle correction consistently improves Brier score when applied to the synthetic condition. The observed deltas are negative, indicating a decrease in Brier score.",
+      "revised_statement": "The hypothesis that oracle correction may improve Brier score is supported by the evidence.",
+      "revised_prediction": "The hypothesis is supported by the evidence, and the improvement in Brier score is consistent.",
+      "revised_direction": "positive",
+      "references_valid": false,
+      "verified_claim": false
+    },
+    {
+      "hypothesis_id": "865f187e4e1f4dd697195d1df7be4068",
+      "status": "INCONCLUSIVE",
+      "evidence_ids": [
+        "36aebdde38394f99bea8e1bedf469ccd",
+        "4ec1310ba8fb4ea896ed9000f2a3dd6c",
+        "744c075075104ca28d1e4a7808397257",
+        "d8b4148fa4754c0895627673fd362565",
+        "7182df0645044e3e83c4ba04e9a74fff"
+      ],
+      "explanation": "The evidence shows that oracle correction may improve Brier score when applied to the synthetic condition. The observed deltas are negative, indicating a decrease in Brier score.",
+      "revised_statement": "The hypothesis that oracle correction may fail to improve Brier score is supported by the evidence.",
+      "revised_prediction": "The hypothesis is supported by the evidence, and the improvement in Brier score is consistent.",
+      "revised_direction": "negative",
+      "references_valid": false,
+      "verified_claim": false
+    }
+  ],
+  "verified_assessments": [
+    {
+      "hypothesis_id": "bde7447e5f014360a159c1ec89bd02d6",
+      "status": "INCONCLUSIVE",
+      "verified_claim": false,
+      "reason": "Insufficient verified independent replications: need 3 distinct seeds within one identical parameter and phase condition.",
+      "evidence_ids": []
+    },
+    {
+      "hypothesis_id": "865f187e4e1f4dd697195d1df7be4068",
+      "status": "INCONCLUSIVE",
+      "verified_claim": false,
+      "reason": "Insufficient verified independent replications: need 3 distinct seeds within one identical parameter and phase condition.",
+      "evidence_ids": []
+    },
+    {
+      "hypothesis_id": "bde7447e5f014360a159c1ec89bd02d6",
+      "status": "INCONCLUSIVE",
+      "verified_claim": false,
+      "reason": "Insufficient verified independent replications: need 3 distinct seeds within one identical parameter and phase condition.",
+      "evidence_ids": []
+    },
+    {
+      "hypothesis_id": "865f187e4e1f4dd697195d1df7be4068",
+      "status": "INCONCLUSIVE",
+      "verified_claim": false,
+      "reason": "Insufficient verified independent replications: need 3 distinct seeds within one identical parameter and phase condition.",
+      "evidence_ids": []
+    }
+  ],
+  "model_provenance": [],
+  "termination_audits": [],
+  "telemetry": {
+    "mode": "lazyloop",
+    "executed_experiments": 5,
+    "successful_measurements": 5,
+    "supported_findings": 1,
+    "premature_stops": null,
+    "failed_execution_attempts": 0,
+    "cache_hits": 1,
+    "redundant_proposals": 1,
+    "failed_measurements": 0,
+    "rejected_proposals": 0,
+    "model_tokens": 10712,
+    "model_calls": 5,
+    "inference_seconds": 410.86193846899914,
+    "wall_seconds": 430.49328365400015,
+    "execution_seconds": 18.853534976000446,
+    "scientific_cpu_seconds": 15.273776,
+    "peak_memory_bytes": 219492352,
+    "termination_reason": "Predeclared operational research criteria satisfied; conclusions are scoped to the tested conditions",
+    "count_definitions": {
+      "supported_findings": "Distinct confirmed fixed-condition groups with consistently directional or effectively zero deltas under the minimum independent replication protocol; not general scientific truth.",
+      "premature_stops": "Detected known-protocol soft-stop violations in persisted termination audits; null without an audit, not a claim of universal optimal stopping.",
+      "failed_execution_attempts": "Persisted FAILED local execution receipts; null if a charged execution has no result receipt."
+    }
+  },
+  "quality": {
+    "quality_score": 1.0,
+    "quality_score_definition": "Equal-weight independent-seed and reserved-confirmatory-seed coverage, capped at minimum_replications. Coverage is not scientific truth.",
+    "scientific_quality_score": 1.0,
+    "scientific_quality_score_definition": "Predeclared weighted diagnostic: measurement integrity .30, independent confirmation .30, applicable no-shift identity controls .20, claim/evidence calibration .20; inapplicable components are excluded and remaining weights renormalized. No valid measurements scores zero.",
+    "rubric": {
+      "measurement_integrity": {
+        "weight": 0.3,
+        "score": 1.0
+      },
+      "independent_confirmation": {
+        "weight": 0.3,
+        "score": 1.0
+      },
+      "controlled_expected_behavior": {
+        "weight": 0.2,
+        "score": null
+      },
+      "claim_evidence_calibration": {
+        "weight": 0.2,
+        "score": 1.0
+      }
+    },
+    "valid_measurements": 5,
+    "invalid_result_ids": [],
+    "scientific_source_versions": [
+      "8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9"
+    ],
+    "independent_seed_count": 5,
+    "protocol_supported_groups": 1,
+    "groups": [
+      {
+        "parameters": {
+          "class_separation": 1.0,
+          "evaluation_prevalence": 0.2,
+          "feature_count": 6,
+          "logistic_c": 1.0,
+          "noise": 0.0,
+          "probability_temperature": 1.0,
+          "sample_size": 500,
+          "train_prevalence": 0.5
+        },
+        "replicate_group": "condition-8a778f0b2fb15140",
+        "independent_confirmatory_seeds": [
+          10000,
+          10001,
+          10002
+        ],
+        "confirmatory_result_ids": [
+          "744c075075104ca28d1e4a7808397257",
+          "d8b4148fa4754c0895627673fd362565",
+          "7182df0645044e3e83c4ba04e9a74fff"
+        ],
+        "confirmatory_mean_delta_brier": -0.006186744939433456,
+        "confirmatory_std_delta_brier": 0.006018919720053192,
+        "confirmatory_delta_brier_ci95": [
+          -0.02113857040001533,
+          0.008765080521148418
+        ],
+        "protocol_assessment": "CONSISTENT_IMPROVEMENT",
+        "exploratory_result_ids": [
+          "36aebdde38394f99bea8e1bedf469ccd",
+          "4ec1310ba8fb4ea896ed9000f2a3dd6c"
+        ],
+        "all_result_ids": [
+          "36aebdde38394f99bea8e1bedf469ccd",
+          "4ec1310ba8fb4ea896ed9000f2a3dd6c",
+          "744c075075104ca28d1e4a7808397257",
+          "d8b4148fa4754c0895627673fd362565",
+          "7182df0645044e3e83c4ba04e9a74fff"
+        ]
+      }
+    ],
+    "control_checks": [],
+    "claim_checks": [
+      {
+        "hypothesis_id": "bde7447e5f014360a159c1ec89bd02d6",
+        "status": "INCONCLUSIVE",
+        "justified": true,
+        "reason": "No established directional claim asserted"
+      },
+      {
+        "hypothesis_id": "865f187e4e1f4dd697195d1df7be4068",
+        "status": "INCONCLUSIVE",
+        "justified": true,
+        "reason": "No established directional claim asserted"
+      }
+    ],
+    "unjustified_established_claims": 0,
+    "model_interpretations_with_invalid_references": 4,
+    "limitations": [
+      "Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.",
+      "Scores are a transparent finite benchmark rubric, not a general measure of scientific truth.",
+      "Student-t intervals assume independent seeds sampled from the generator distribution; no multiplicity correction is applied.",
+      "Consistent replicated effects alone do not establish a general law or statistical significance.",
+      "Reusing an exploratory seed invalidates its confirmatory independence."
+    ]
+  }
+}

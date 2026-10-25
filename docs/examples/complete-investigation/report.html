@@ -1,0 +1,106 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SlothLab research report</title>
+<style>body{font:15px/1.6 system-ui,sans-serif;background:#f3f5f8;color:#172239;margin:0}main{max-width:1100px;margin:40px auto;padding:32px;background:white;border:1px solid #dde4ee;border-radius:20px}.eyebrow{color:#06786b;font-weight:700;letter-spacing:.12em;font-size:12px}h1{font-size:34px;line-height:1.15}h2{margin-top:32px}.cards{display:flex;gap:12px;flex-wrap:wrap}.card{flex:1;min-width:160px;border:1px solid #e0e7ef;border-radius:12px;padding:16px}.card b{display:block;font-size:25px}.note{background:#edf7f5;border-left:4px solid #108577;padding:14px}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:10px;text-align:left;border-bottom:1px solid #e4e9f0}td:first-child{font:11px monospace;word-break:break-all}th{background:#f5f7fa}small,footer{color:#5b6a7f}pre{overflow:auto;background:#f5f7fa;padding:16px;border-radius:12px}li{margin:12px 0}@media print{body{background:white}main{margin:0;border:0;padding:0}}</style>
+<main><div class="eyebrow">SLOTHLAB · RESEARCH RECORD</div><h1>Independent confirmation of a scoped prevalence-shift condition</h1><p>Characterize whether oracle correction consistently improves or worsens Brier score for this one authorized synthetic condition. Explore first, then perform a final batch with three distinct reserved confirmation seeds. Preserve uncertainty about generalization.</p>
+<p><strong>COMPLETED</strong> · qwen3:0.6b · lazyloop</p><p>Predeclared operational research criteria satisfied; conclusions are scoped to the tested conditions</p>
+<div class="cards"><div class="card">Executed<b>5</b></div><div class="card">Exact reuses<b>1</b></div><div class="card">Model tokens<b>10712</b></div><div class="card">Scientific rubric<b>1.000</b></div></div>
+<p class="note">True evaluation prevalence is an oracle input. Negative delta means lower loss. A finite benchmark score is not proof of scientific truth; hypotheses require independent evidence.</p>
+<h2>Measured evidence</h2><div style="overflow:auto"><table><thead><tr><th>Result ID</th><th>Seed</th><th>Status</th><th>Baseline Brier</th><th>Corrected Brier</th><th>Delta Brier</th><th>Seconds</th></tr></thead><tbody><tr><td>36aebdde38394f99bea8e1bedf469ccd</td><td>1</td><td>COMPLETED</td><td>0.05679226</td><td>0.04325759</td><td>-0.01353467</td><td>3.523578</td></tr><tr><td>4ec1310ba8fb4ea896ed9000f2a3dd6c</td><td>2</td><td>COMPLETED</td><td>0.05490767</td><td>0.04096341</td><td>-0.01394426</td><td>3.503111</td></tr><tr><td>744c075075104ca28d1e4a7808397257</td><td>10000</td><td>COMPLETED</td><td>0.0283208</td><td>0.02746521</td><td>-0.000855588</td><td>4.30256</td></tr><tr><td>d8b4148fa4754c0895627673fd362565</td><td>10001</td><td>COMPLETED</td><td>0.06234832</td><td>0.04963446</td><td>-0.01271386</td><td>3.694449</td></tr><tr><td>7182df0645044e3e83c4ba04e9a74fff</td><td>10002</td><td>COMPLETED</td><td>0.02974806</td><td>0.02475727</td><td>-0.004990786</td><td>3.829838</td></tr></tbody></table></div>
+<h2>Hypotheses and uncertainty</h2><ul><li><strong>INCONCLUSIVE</strong> Hypothesis 1: Oracle correction may improve Brier score when applied to the synthetic condition.<br><small>negative</small></li><li><strong>INCONCLUSIVE</strong> Hypothesis 2: Oracle correction may fail to improve Brier score when applied to the synthetic condition.<br><small>positive</small></li></ul><h2>Deterministic evidence audit</h2><pre>{
+  &quot;quality_score&quot;: 1.0,
+  &quot;quality_score_definition&quot;: &quot;Equal-weight independent-seed and reserved-confirmatory-seed coverage, capped at minimum_replications. Coverage is not scientific truth.&quot;,
+  &quot;scientific_quality_score&quot;: 1.0,
+  &quot;scientific_quality_score_definition&quot;: &quot;Predeclared weighted diagnostic: measurement integrity .30, independent confirmation .30, applicable no-shift identity controls .20, claim/evidence calibration .20; inapplicable components are excluded and remaining weights renormalized. No valid measurements scores zero.&quot;,
+  &quot;rubric&quot;: {
+    &quot;measurement_integrity&quot;: {
+      &quot;weight&quot;: 0.3,
+      &quot;score&quot;: 1.0
+    },
+    &quot;independent_confirmation&quot;: {
+      &quot;weight&quot;: 0.3,
+      &quot;score&quot;: 1.0
+    },
+    &quot;controlled_expected_behavior&quot;: {
+      &quot;weight&quot;: 0.2,
+      &quot;score&quot;: null
+    },
+    &quot;claim_evidence_calibration&quot;: {
+      &quot;weight&quot;: 0.2,
+      &quot;score&quot;: 1.0
+    }
+  },
+  &quot;valid_measurements&quot;: 5,
+  &quot;invalid_result_ids&quot;: [],
+  &quot;scientific_source_versions&quot;: [
+    &quot;8ab1a153dfd307a6df017ed3de9e5cddd01ad0a46439f9e6ffca1264c75c2ed9&quot;
+  ],
+  &quot;independent_seed_count&quot;: 5,
+  &quot;protocol_supported_groups&quot;: 1,
+  &quot;groups&quot;: [
+    {
+      &quot;parameters&quot;: {
+        &quot;class_separation&quot;: 1.0,
+        &quot;evaluation_prevalence&quot;: 0.2,
+        &quot;feature_count&quot;: 6,
+        &quot;logistic_c&quot;: 1.0,
+        &quot;noise&quot;: 0.0,
+        &quot;probability_temperature&quot;: 1.0,
+        &quot;sample_size&quot;: 500,
+        &quot;train_prevalence&quot;: 0.5
+      },
+      &quot;replicate_group&quot;: &quot;condition-8a778f0b2fb15140&quot;,
+      &quot;independent_confirmatory_seeds&quot;: [
+        10000,
+        10001,
+        10002
+      ],
+      &quot;confirmatory_result_ids&quot;: [
+        &quot;744c075075104ca28d1e4a7808397257&quot;,
+        &quot;d8b4148fa4754c0895627673fd362565&quot;,
+        &quot;7182df0645044e3e83c4ba04e9a74fff&quot;
+      ],
+      &quot;confirmatory_mean_delta_brier&quot;: -0.006186744939433456,
+      &quot;confirmatory_std_delta_brier&quot;: 0.006018919720053192,
+      &quot;confirmatory_delta_brier_ci95&quot;: [
+        -0.02113857040001533,
+        0.008765080521148418
+      ],
+      &quot;protocol_assessment&quot;: &quot;CONSISTENT_IMPROVEMENT&quot;,
+      &quot;exploratory_result_ids&quot;: [
+        &quot;36aebdde38394f99bea8e1bedf469ccd&quot;,
+        &quot;4ec1310ba8fb4ea896ed9000f2a3dd6c&quot;
+      ],
+      &quot;all_result_ids&quot;: [
+        &quot;36aebdde38394f99bea8e1bedf469ccd&quot;,
+        &quot;4ec1310ba8fb4ea896ed9000f2a3dd6c&quot;,
+        &quot;744c075075104ca28d1e4a7808397257&quot;,
+        &quot;d8b4148fa4754c0895627673fd362565&quot;,
+        &quot;7182df0645044e3e83c4ba04e9a74fff&quot;
+      ]
+    }
+  ],
+  &quot;control_checks&quot;: [],
+  &quot;claim_checks&quot;: [
+    {
+      &quot;hypothesis_id&quot;: &quot;bde7447e5f014360a159c1ec89bd02d6&quot;,
+      &quot;status&quot;: &quot;INCONCLUSIVE&quot;,
+      &quot;justified&quot;: true,
+      &quot;reason&quot;: &quot;No established directional claim asserted&quot;
+    },
+    {
+      &quot;hypothesis_id&quot;: &quot;865f187e4e1f4dd697195d1df7be4068&quot;,
+      &quot;status&quot;: &quot;INCONCLUSIVE&quot;,
+      &quot;justified&quot;: true,
+      &quot;reason&quot;: &quot;No established directional claim asserted&quot;
+    }
+  ],
+  &quot;unjustified_established_claims&quot;: 0,
+  &quot;model_interpretations_with_invalid_references&quot;: 4,
+  &quot;limitations&quot;: [
+    &quot;Oracle evaluation prevalence is supplied; deployment prevalence estimation is not evaluated.&quot;,
+    &quot;Scores are a transparent finite benchmark rubric, not a general measure of scientific truth.&quot;,
+    &quot;Student-t intervals assume independent seeds sampled from the generator distribution; no multiplicity correction is applied.&quot;,
+    &quot;Consistent replicated effects alone do not establish a general law or statistical significance.&quot;,
+    &quot;Reusing an exploratory seed invalidates its confirmatory independence.&quot;
+  ]
+}</pre>
+<h2>Reproducibility</h2><p>Full parameters, artifact fingerprints, environment versions, measured results and decision receipts accompany this report in metrics.json and experiments.csv.</p><footer>Session 5bee1711d22248aabfb5ec9b2b32f375 · Generated 2026-10-25T20:04:13.160676+00:00</footer></main></html>
