@@ -14,6 +14,8 @@ The initial laboratory studies **oracle prior-probability correction under class
 
 [GitHub Pages demo](https://mso-docs.github.io/LazyLab/) · [Video help guide](https://mso-docs.github.io/LazyLab/help.html) · [Pages setup](docs/github-pages.md)
 
+[Read the project write-up on DEV: SlothLab — Hacktoberfest Week 3 Challenge](https://dev.to/mackenzie-techdocs/slothlab-hacktoberfest-week-3-challenge-11ao)
+
 ## Quick start
 
 Use Python 3.12 or newer. Install Ollama separately, start its server, and select a model already listed by `ollama list`. SlothLab never downloads model weights automatically.
