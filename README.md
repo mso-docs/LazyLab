@@ -8,6 +8,12 @@ The initial laboratory studies **oracle prior-probability correction under class
 
 > This is a single-user Linux application intended for loopback use. It is not a public multi-tenant service. Scientific conclusions remain scoped to recorded evidence and the finite experimental protocol.
 
+[Watch the walkthrough on YouTube](https://youtu.be/UV3h4IRk3go) · [Demo files and transcript](docs/demo.md)
+
+[![Watch the SlothLab walkthrough on YouTube](https://img.youtube.com/vi/UV3h4IRk3go/hqdefault.jpg)](https://youtu.be/UV3h4IRk3go)
+
+[GitHub Pages demo](https://mso-docs.github.io/LazyLab/) · [Video help guide](https://mso-docs.github.io/LazyLab/help.html) · [Pages setup](docs/github-pages.md)
+
 ## Quick start
 
 Use Python 3.12 or newer. Install Ollama separately, start its server, and select a model already listed by `ollama list`. SlothLab never downloads model weights automatically.
@@ -169,3 +175,5 @@ The [requirements audit](docs/requirements.md) maps the original writeup to impl
 The original v0.1 boundary excluded unrestricted code execution, internet/literature research, fine-tuning, self-modification, distributed execution, multi-user authentication, cloud dependencies and autonomous publication. Optional semantic embeddings, learned scheduling, external tracing and additional scientific families are future work, not hidden MVP dependencies.
 
 Version 0.2.0 adds appearance preferences, local browser profiles, portable JSON guest sessions, and guided learning. See [QoL verification and remaining deployment limits](docs/qol-verification.md).
+
+For a pre-publication history audit, see [Gitleaks setup and history scanning](docs/security.md), or run `bash scripts/scan_history.sh`.

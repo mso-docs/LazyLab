@@ -43,3 +43,6 @@ research.json
 htmlcov/
 .DS_Store
 Thumbs.db
+
+# Browser-generated personal planning downloads.
+slothlab-design-notes*.json

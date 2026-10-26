@@ -1,0 +1,46 @@
+{
+  "title": "Independent confirmation of a scoped prevalence-shift condition",
+  "state": "COMPLETED",
+  "model": "qwen3:0.6b",
+  "executions": 5,
+  "cache_hits": 1,
+  "tokens": 10712,
+  "rows": [
+    {
+      "seed": 1,
+      "phase": "exploratory",
+      "delta": -0.013534670088016898,
+      "baseline": 0.056792255482151104,
+      "corrected": 0.043257585394134206
+    },
+    {
+      "seed": 2,
+      "phase": "exploratory",
+      "delta": -0.013944255250271688,
+      "baseline": 0.05490766671574067,
+      "corrected": 0.04096341146546898
+    },
+    {
+      "seed": 10000,
+      "phase": "confirmatory",
+      "delta": -0.0008555879832760939,
+      "baseline": 0.028320795609508488,
+      "corrected": 0.027465207626232394
+    },
+    {
+      "seed": 10001,
+      "phase": "confirmatory",
+      "delta": -0.012713860511475682,
+      "baseline": 0.06234832296811552,
+      "corrected": 0.04963446245663984
+    },
+    {
+      "seed": 10002,
+      "phase": "confirmatory",
+      "delta": -0.004990786323548591,
+      "baseline": 0.02974805740022955,
+      "corrected": 0.024757271076680958
+    }
+  ],
+  "source": "https://github.com/mso-docs/LazyLab/tree/main/docs/examples/complete-investigation"
+}

@@ -9,3 +9,7 @@ System appearance follows the browser/device `prefers-color-scheme` preference. 
 The static assets are `slothlab/data/tutorial/research-guide.mp4` (H.264, 960 × 540, no audio) and `research-guide.vtt`. They must be included in installed packages. Viewing requires no video-generation dependencies and no external service. To rebuild, install Pillow in a development environment and run `python -m slothlab.ui.build_tutorial /path/to/ffmpeg`; the generator uses the lesson definitions in `slothlab/ui/learning.py` and the system DejaVu Sans font. After changing lesson timing or text, rebuild the assets and run the learning tests.
 
 The connections page explains that local and remote Ollama-compatible HTTP(S) endpoints are supported, while scientific experiments execute on the application host. Sending research context to a remote endpoint is different from running experiments remotely. Arbitrary OpenAI/Anthropic endpoints and authenticated gateways are not implemented by this adapter.
+
+For a shareable product overview outside the application, see the [90-second illustrated overview](illustrated-demo.md).
+
+An [actual automated browser recording](demo.md) demonstrates navigation, evidence review, portable export, guest restore, and local profiles.

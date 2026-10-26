@@ -1,0 +1,43 @@
+WEBVTT
+
+00:00:00.052 --> 00:00:06.279
+This is the running SlothLab app. The selected investigation was completed earlier; this walkthrough does not start a new research run.
+
+00:00:06.279 --> 00:00:12.463
+Switch between Light, Dark, and System appearance.
+
+00:00:12.463 --> 00:00:19.227
+New investigation defines a testable question within the registered prior-correction experiment.
+
+00:00:19.227 --> 00:00:24.419
+Discover installed models on a local or remote Ollama-compatible endpoint. Experiments still execute on the app host.
+
+00:00:24.419 --> 00:00:31.461
+Set experiment and token budgets before running. Reserve independent confirmation seeds. No new investigation is launched in this recording.
+
+00:00:31.461 --> 00:00:38.425
+The completed investigation contains five real executions and one verified reuse. These are recorded results, not simulated demo data.
+
+00:00:38.425 --> 00:00:45.384
+Inspect the experiment table and distinguish execution from exact-result reuse. Reuse does not count as independent replication.
+
+00:00:45.384 --> 00:00:54.033
+Read the finite protocol assessment and confirmatory evidence. Operational completion does not establish a universal scientific conclusion.
+
+00:00:54.033 --> 00:01:00.639
+Prepare and download a portable research bundle containing recorded measurements and artifacts.
+
+00:01:00.639 --> 00:01:07.986
+Guest mode uses temporary JSON documents and artifact files. Download a bundle to preserve the session.
+
+00:01:07.986 --> 00:01:14.986
+The exported investigation is now reopened in Guest mode. Importing history starts no inference.
+
+00:01:14.986 --> 00:01:20.899
+Learn and help provides a captioned lesson, chapter navigation, transcripts, and practice questions.
+
+00:01:20.899 --> 00:01:29.734
+Use the checklist to plan hypotheses, controls, confirmation seeds, budgets, and uncertainty.
+
+00:01:29.734 --> 00:01:35.825
+A named local browser profile keeps separate history on this browser and origin. It is a convenience profile, not cross-device account sign-in.
